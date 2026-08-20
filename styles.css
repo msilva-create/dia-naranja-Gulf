@@ -1,14 +1,14 @@
 :root {
   --orange: #f58220;
-  --orange-dark: #df6d0d;
+  --orange-light: #ff963b;
   --navy: #003b71;
   --deep: #062c52;
   --blue: #005596;
   --white: #ffffff;
   --text: #163451;
-  --muted: #657b8f;
-  --background: #f6f9fb;
-  --border: #dce6ed;
+  --muted: #647b90;
+  --background: #f5f8fa;
+  --border: #dce7ee;
 }
 
 * {
@@ -21,49 +21,50 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden;
   font-family: Arial, Helvetica, sans-serif;
   background: var(--background);
   color: var(--text);
-  overflow-x: hidden;
 }
 
 
-/* =========================
-   HERO MOBILE FIRST
-========================= */
+/* ===============================
+   HERO - MOBILE FIRST
+=============================== */
 
 .hero {
+  width: 100%;
+  padding: 30px 18px 34px;
   background: linear-gradient(
-    120deg,
-    rgba(0,59,113,.98),
-    rgba(0,85,150,.96)
+    135deg,
+    var(--navy),
+    #075a9e
   );
   color: white;
-  padding: 34px 16px 38px;
 }
 
 .hero-content {
   width: 100%;
-  max-width: 520px;
-  margin: auto;
+  max-width: 560px;
+  margin: 0 auto;
 }
 
 .campaign-tag {
   display: inline-block;
+  padding: 8px 13px;
+  margin-bottom: 15px;
+  border-radius: 30px;
   background: var(--orange);
   color: white;
   font-size: 11px;
   font-weight: 900;
-  padding: 8px 13px;
-  border-radius: 40px;
   letter-spacing: 1px;
-  margin-bottom: 16px;
 }
 
 .hero h1 {
-  font-size: 36px;
-  line-height: 1.03;
-  margin: 0 0 13px;
+  margin: 0 0 12px;
+  font-size: 34px;
+  line-height: 1.05;
 }
 
 .hero h1 span {
@@ -71,142 +72,159 @@ body {
 }
 
 .hero h2 {
-  font-size: 22px;
-  line-height: 1.2;
-  margin: 0 0 14px;
+  margin: 0 0 13px;
+  font-size: 21px;
 }
 
 .hero-description {
-  font-size: 16px;
-  line-height: 1.5;
   margin: 0 0 10px;
+  font-size: 16px;
+  line-height: 1.45;
 }
 
 .hero-cta {
+  margin: 0 0 18px;
+  color: #ffd8b8;
   font-size: 16px;
   font-weight: 800;
-  color: #ffd7b5;
-  margin: 0 0 20px;
 }
 
 .days {
   display: flex;
-  gap: 7px;
   flex-wrap: wrap;
+  gap: 7px;
 }
 
 .days span {
-  border: 1px solid rgba(255,255,255,.3);
-  background: rgba(255,255,255,.1);
   padding: 8px 11px;
+  border: 1px solid rgba(255,255,255,.25);
   border-radius: 30px;
+  background: rgba(255,255,255,.1);
   font-size: 11px;
   font-weight: 800;
 }
 
 
-/* =========================
-   IMAGEN
-========================= */
+/* ===============================
+   IMAGEN CAMPAÑA
+=============================== */
 
 .campaign-image-section {
   width: 100%;
-  background: var(--deep);
 }
 
 .campaign-image {
   width: 100%;
+  height: auto;
   display: block;
 }
 
 
-/* =========================
-   MAIN MOBILE
-========================= */
+/* ===============================
+   CONTENIDO
+=============================== */
 
 .main-container {
   width: 100%;
-  max-width: 520px;
+  max-width: 560px;
   margin: 0 auto;
-  padding: 22px 10px 34px;
+  padding: 18px 10px 35px;
 }
 
 
-/* =========================
-   BUSCADOR
-========================= */
+/* ===============================
+   BLOQUE BUSCADOR
+=============================== */
 
 .search-section {
   width: 100%;
+  padding: 20px 14px;
+  border-radius: 20px;
   background: white;
-  border-radius: 18px;
-  padding: 18px 14px;
-  box-shadow: 0 12px 34px rgba(0,59,113,.08);
+  box-shadow: 0 12px 32px rgba(0,59,113,.08);
 }
 
 .section-label {
-  color: var(--orange);
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 1.1px;
   margin-bottom: 7px;
+  color: var(--orange);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
 }
 
 .search-section h2 {
-  margin: 0 0 8px;
-  font-size: 24px;
-  line-height: 1.2;
+  margin: 0 0 7px;
   color: var(--deep);
+  font-size: 26px;
+  line-height: 1.15;
 }
 
 .search-description {
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.45;
   margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 
+/* ===============================
+   BUSCADOR PROTAGONISTA
+=============================== */
+
 .search-box {
+  width: 100%;
+  min-height: 68px;
   display: flex;
   align-items: center;
-  gap: 9px;
-  background: #f5f8fa;
-  border: 2px solid var(--border);
-  padding: 2px 13px;
-  border-radius: 13px;
+  gap: 12px;
+  padding: 5px 17px;
+  border: 3px solid #cbdce8;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(0,59,113,.08);
+  transition: .2s ease;
 }
 
 .search-box:focus-within {
   border-color: var(--orange);
-  box-shadow: 0 0 0 4px rgba(245,130,32,.09);
+  box-shadow:
+    0 0 0 5px rgba(245,130,32,.10),
+    0 10px 28px rgba(0,59,113,.10);
 }
 
 .search-icon {
-  font-size: 19px;
+  flex-shrink: 0;
+  font-size: 25px;
 }
 
 .search-box input {
   width: 100%;
-  min-height: 50px;
+  height: 58px;
+  padding: 0;
   border: none;
   outline: none;
   background: transparent;
-  font-size: 16px;
   color: var(--deep);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.search-box input::placeholder {
+  color: #8799a8;
+  font-weight: 500;
 }
 
 
-/* =========================
-   AYUDA CÁRTER
-========================= */
+/* ===============================
+   AYUDA CAPACIDAD
+=============================== */
 
 .capacity-help {
-  margin-top: 12px;
-  padding: 14px;
-  border-radius: 13px;
-  background: #f3f7fa;
-  color: #526b80;
+  margin-top: 13px;
+  padding: 14px 15px;
+  border-radius: 14px;
+  background: #f1f6f9;
+  color: var(--muted);
   font-size: 13px;
   line-height: 1.45;
 }
@@ -236,32 +254,35 @@ body {
 }
 
 
-/* =========================
+/* ===============================
    RESULTADOS
-========================= */
+=============================== */
 
 .results {
   margin-top: 16px;
 }
 
+
+/* VEHÍCULOS */
+
 .search-options {
-  border-radius: 14px;
   overflow: hidden;
-  background: white;
   border: 1px solid var(--border);
+  border-radius: 16px;
+  background: white;
 }
 
 .vehicle-option {
   width: 100%;
-  min-height: 70px;
-  border: none;
-  border-bottom: 1px solid #e8eef2;
-  background: white;
-  padding: 13px 12px;
+  min-height: 78px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+  padding: 15px;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  background: white;
   text-align: left;
   cursor: pointer;
 }
@@ -281,124 +302,137 @@ body {
 .vehicle-title {
   display: block;
   color: var(--deep);
-  font-size: 15px;
-  line-height: 1.25;
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 1.2;
 }
 
 .vehicle-motor {
   display: block;
-  margin-top: 4px;
+  margin-top: 5px;
   color: var(--muted);
-  font-size: 12px;
-  line-height: 1.3;
-}
-
-.capacity-result {
-  margin-top: 8px;
-}
-
-.capacity-result span {
-  display: block;
-  color: var(--navy);
-  font-size: 10px;
-  font-weight: 900;
-}
-
-.capacity-result strong {
-  display: block;
-  margin-top: 3px;
-  color: var(--orange);
   font-size: 14px;
-  line-height: 1.3;
 }
 
 .vehicle-arrow {
   flex-shrink: 0;
   color: var(--orange);
-  font-size: 28px;
-  font-weight: bold;
-  line-height: 1;
+  font-size: 34px;
+  font-weight: 900;
 }
 
 
-/* =========================
-   SIN RESULTADOS
-========================= */
+/* ===============================
+   RANGOS OTRAS MARCAS
+=============================== */
 
-.no-results {
-  padding: 20px 14px;
-  border-radius: 13px;
-  background: #f7fafc;
-  color: var(--muted);
-  text-align: center;
-  line-height: 1.5;
-  font-size: 13px;
+.range-search-title {
+  margin-bottom: 10px;
+  padding: 4px 2px;
 }
 
-.no-results strong {
+.range-search-title strong {
+  display: block;
   color: var(--deep);
+  font-size: 18px;
 }
 
-
-/* =========================
-   ESTADO INICIAL
-========================= */
-
-.empty-state {
-  padding: 30px 12px 8px;
-  text-align: center;
+.range-search-title span {
+  display: block;
+  margin-top: 3px;
   color: var(--muted);
-}
-
-.empty-icon {
-  font-size: 38px;
-  margin-bottom: 8px;
-}
-
-.empty-state h3 {
-  color: var(--deep);
-  margin: 0 0 5px;
-  font-size: 17px;
-}
-
-.empty-state p {
-  margin: auto;
-  max-width: 380px;
-  line-height: 1.45;
   font-size: 13px;
 }
 
 
-/* =========================
-   BOTÓN VOLVER
-========================= */
+.range-options {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: white;
+}
 
-.back-search {
+.range-option {
+  width: 100%;
+  min-height: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px;
   border: none;
-  background: transparent;
-  color: var(--blue);
-  font-weight: 800;
-  font-size: 13px;
-  padding: 5px 0 12px;
+  border-bottom: 1px solid var(--border);
+  background: white;
+  text-align: left;
   cursor: pointer;
 }
 
+.range-option:last-child {
+  border-bottom: none;
+}
 
-/* =========================
-   PROMO
-========================= */
+.range-option:active {
+  background: #fff4eb;
+}
+
+.range-option-content {
+  flex: 1;
+}
+
+.range-label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--navy);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .5px;
+}
+
+.range-main {
+  display: block;
+  color: var(--deep);
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.range-gift-preview {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.range-gift-preview strong {
+  color: var(--orange);
+  font-size: 16px;
+}
+
+
+/* ===============================
+   PROMOCIÓN
+=============================== */
+
+.back-search {
+  margin: 0 0 10px;
+  padding: 8px 0;
+  border: none;
+  background: transparent;
+  color: var(--blue);
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+}
 
 .promo-card {
   width: 100%;
   overflow: hidden;
-  border-radius: 18px;
+  border-radius: 20px;
   background: var(--deep);
-  box-shadow: 0 12px 28px rgba(0,59,113,.15);
+  box-shadow: 0 12px 28px rgba(0,59,113,.16);
 }
 
 .promo-vehicle {
+  padding: 17px 15px;
   background: white;
-  padding: 16px 14px;
 }
 
 .promo-vehicle > span {
@@ -406,29 +440,29 @@ body {
   color: var(--orange);
   font-size: 10px;
   font-weight: 900;
-  letter-spacing: .8px;
+  letter-spacing: .7px;
 }
 
 .promo-vehicle h3 {
-  color: var(--deep);
   margin: 5px 0 0;
-  font-size: 19px;
+  color: var(--deep);
+  font-size: 20px;
 }
 
 .promo-vehicle p {
   margin: 6px 0 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 14px;
 }
 
 
-/* SOLO OTRAS MARCAS */
+/* RANGO SELECCIONADO */
 
 .selected-range {
   margin-top: 12px;
-  padding: 12px;
-  border-radius: 11px;
-  background: #f3f7fa;
+  padding: 14px;
+  border-radius: 13px;
+  background: #f1f6f9;
 }
 
 .selected-range span {
@@ -442,56 +476,56 @@ body {
   display: block;
   margin-top: 4px;
   color: var(--orange);
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.3;
 }
 
 
-/* =========================
+/* ===============================
    GULF TE DA
-========================= */
+=============================== */
 
 .gulf-gift {
-  padding: 22px 14px;
-  text-align: center;
-  color: white;
+  padding: 25px 15px;
   background: linear-gradient(
     135deg,
     var(--orange),
-    #ff9b43
+    var(--orange-light)
   );
+  color: white;
+  text-align: center;
 }
 
 .gulf-gift span {
   display: block;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 900;
-  letter-spacing: 1.2px;
+  letter-spacing: 1px;
 }
 
 .gulf-gift strong {
   display: block;
-  margin: 3px 0;
-  font-size: 62px;
+  margin: 4px 0;
+  font-size: 76px;
   line-height: .95;
 }
 
 .gulf-gift b {
   display: block;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .gulf-gift small {
   display: block;
-  margin-top: 5px;
-  font-size: 12px;
+  margin-top: 6px;
+  font-size: 13px;
   font-weight: 700;
 }
 
 
-/* =========================
+/* ===============================
    PAGA / RECIBE
-========================= */
+=============================== */
 
 .promo-summary {
   display: grid;
@@ -499,10 +533,10 @@ body {
 }
 
 .promo-summary > div {
-  padding: 17px 8px;
-  text-align: center;
-  color: white;
+  padding: 18px 8px;
   background: var(--deep);
+  color: white;
+  text-align: center;
 }
 
 .promo-summary .promo-total {
@@ -511,15 +545,14 @@ body {
 
 .promo-summary span {
   display: block;
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 900;
-  letter-spacing: .8px;
 }
 
 .promo-summary strong {
   display: block;
   margin: 3px 0;
-  font-size: 36px;
+  font-size: 40px;
 }
 
 .promo-summary .promo-total strong {
@@ -531,12 +564,75 @@ body {
 }
 
 
-/* =========================
-   SECCIÓN INFO
-========================= */
+/* ===============================
+   SIN RESULTADOS
+=============================== */
+
+.no-results {
+  padding: 20px 15px;
+  border-radius: 14px;
+  background: #f2f7fa;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.no-results > strong {
+  color: var(--deep);
+  font-size: 16px;
+}
+
+.mini-ranges {
+  display: grid;
+  gap: 7px;
+  margin-top: 12px;
+}
+
+.mini-ranges span {
+  padding: 9px;
+  border-radius: 9px;
+  background: white;
+  color: var(--navy);
+  font-weight: 800;
+}
+
+
+/* ===============================
+   ESTADO INICIAL
+=============================== */
+
+.empty-state {
+  padding: 30px 12px 8px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.empty-icon {
+  margin-bottom: 8px;
+  font-size: 38px;
+}
+
+.empty-state h3 {
+  margin: 0 0 5px;
+  color: var(--deep);
+  font-size: 17px;
+}
+
+.empty-state p {
+  margin: auto;
+  max-width: 380px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+
+/* ===============================
+   PARTE INFERIOR
+=============================== */
 
 .about-section {
-  margin-top: 34px;
+  margin-top: 32px;
 }
 
 .about-header {
@@ -550,119 +646,106 @@ body {
 }
 
 .about-header h2 {
-  color: var(--deep);
   margin: 7px 0 10px;
-  font-size: 26px;
+  color: var(--deep);
+  font-size: 25px;
 }
 
 .about-header p {
   color: var(--muted);
   font-size: 14px;
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
 .steps {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 12px;
-  margin-top: 20px;
+  gap: 11px;
+  margin-top: 18px;
 }
 
 .steps article {
-  background: white;
-  border-radius: 15px;
   padding: 18px;
-  box-shadow: 0 8px 24px rgba(0,59,113,.05);
+  border-radius: 15px;
+  background: white;
 }
 
 .step-number {
+  margin-bottom: 7px;
   color: var(--orange);
   font-size: 27px;
   font-weight: 900;
-  margin-bottom: 8px;
 }
 
 .steps h3 {
+  margin: 0 0 5px;
   color: var(--deep);
-  margin: 0 0 6px;
   font-size: 17px;
 }
 
 .steps p {
-  color: var(--muted);
   margin: 0;
-  line-height: 1.45;
+  color: var(--muted);
   font-size: 13px;
+  line-height: 1.4;
 }
 
 
-/* =========================
+/* ===============================
    FOOTER
-========================= */
+=============================== */
 
 footer {
+  padding: 27px 16px;
   background: var(--deep);
   color: white;
-  padding: 28px 16px;
   text-align: center;
-}
-
-.footer-brand strong {
-  font-size: 17px;
 }
 
 .footer-brand p {
   color: #b9cad8;
-  margin: 6px 0 16px;
   font-size: 13px;
 }
 
 .social-links {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 9px;
-  max-width: 360px;
-  margin: auto;
+  max-width: 390px;
+  margin: 15px auto 0;
 }
 
 .social-links a {
-  display: block;
-  text-decoration: none;
-  color: white;
+  padding: 12px;
   border: 1px solid rgba(255,255,255,.25);
   border-radius: 28px;
-  padding: 11px 15px;
-  font-weight: 700;
-  font-size: 13px;
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
 }
 
 
-/* =========================
-   TABLET / DESKTOP
-========================= */
+/* ===============================
+   PANTALLAS MÁS GRANDES
+=============================== */
 
 @media (min-width: 700px) {
 
-  .hero-content {
-    max-width: 620px;
-  }
-
+  .hero-content,
   .main-container {
     max-width: 620px;
   }
 
   .hero h1 {
-    font-size: 44px;
+    font-size: 42px;
   }
 
-  .social-links {
-    flex-direction: row;
-    justify-content: center;
-    max-width: none;
+  .search-box {
+    min-height: 72px;
   }
 
-  .steps {
-    grid-template-columns: repeat(3, 1fr);
+  .search-box input {
+    font-size: 19px;
   }
 
 }
