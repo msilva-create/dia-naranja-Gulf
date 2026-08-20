@@ -1,4 +1,4 @@
-let promotions = [];
+let promociones = [];
 
 const searchInput = document.getElementById("searchInput");
 const resultsContainer = document.getElementById("results");
@@ -6,42 +6,16 @@ const emptyState = document.getElementById("emptyState");
 
 
 /* =========================
-   CARGAR DATOS
+   CARGAR BASE
 ========================= */
 
 fetch("data.json")
-  .then((response) => {
-
-    if (!response.ok) {
-      throw new Error("No se pudo cargar data.json");
-    }
-
-    return response.json();
-
+  .then(response => response.json())
+  .then(data => {
+    promociones = data;
   })
-  .then((data) => {
-
-    promotions = data;
-
-    console.log(
-      `Días Naranja: ${promotions.length} registros cargados`
-    );
-
-  })
-  .catch((error) => {
-
-    console.error(error);
-
-    emptyState.innerHTML = `
-      <div class="empty-icon">⚠️</div>
-
-      <h3>No pudimos cargar la información</h3>
-
-      <p>
-        Revisa que el archivo data.json esté ubicado en la raíz del proyecto.
-      </p>
-    `;
-
+  .catch(error => {
+    console.error("Error cargando data.json:", error);
   });
 
 
@@ -49,31 +23,21 @@ fetch("data.json")
    NORMALIZAR TEXTO
 ========================= */
 
-function normalizeText(value) {
-
-  if (value === null || value === undefined) {
-    return "";
-  }
-
-  return String(value)
+function normalizar(texto) {
+  return String(texto || "")
     .toLowerCase()
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .trim();
-
 }
 
 
 /* =========================
-   OBTENER VALOR
-   Permite diferentes nombres
-   de columnas del JSON
+   LEER CAMPOS
 ========================= */
 
-function getValue(item, keys) {
-
-  for (const key of keys) {
-
+function valor(item, opciones) {
+  for (const key of opciones) {
     if (
       item[key] !== undefined &&
       item[key] !== null &&
@@ -81,422 +45,392 @@ function getValue(item, keys) {
     ) {
       return item[key];
     }
-
   }
 
   return "";
-
 }
 
 
 /* =========================
-   DATOS DEL REGISTRO
+   ORGANIZAR PROMOCIÓN
 ========================= */
 
-function parsePromotion(item) {
+function prepararPromo(item) {
 
-  const marcaEquipo = getValue(
-    item,
-    [
-      "marcaEquipo",
-      "Marca del Equipo",
-      "marca_equipo"
-    ]
-  );
+  const marcaEquipo = valor(item, [
+    "marcaEquipo",
+    "Marca del Equipo",
+    "marca_equipo"
+  ]);
 
-  const linea = getValue(
-    item,
-    [
-      "linea",
-      "Linea",
-      "Línea"
-    ]
-  );
+  const linea = valor(item, [
+    "linea",
+    "Linea",
+    "Línea"
+  ]);
 
-  const modeloMotor = getValue(
-    item,
-    [
-      "modeloMotor",
-      "Modelo Motor",
-      "modelo_motor"
-    ]
-  );
+  const marcaMotor = valor(item, [
+    "marcaMotor",
+    "Marca Motor",
+    "marca_motor"
+  ]);
 
-  const marcaMotor = getValue(
-    item,
-    [
-      "marcaMotor",
-      "Marca Motor",
-      "marca_motor"
-    ]
-  );
+  const modeloMotor = valor(item, [
+    "modeloMotor",
+    "Modelo Motor",
+    "modelo_motor"
+  ]);
 
   const capacidad = Number(
-    getValue(
-      item,
-      [
-        "capacidad",
-        "capacidadCarter",
-        "capacidad del carter",
-        "Capacidad Carter"
-      ]
-    )
+    valor(item, [
+      "capacidad",
+      "capacidadCarter",
+      "Capacidad Carter",
+      "Capacidad del Carter"
+    ])
   ) || 0;
 
-  let obsequioRaw = getValue(
-    item,
-    [
-      "obsequio",
-      "OBSEQUIO",
-      "Obsequio"
-    ]
-  );
+  const promocion = valor(item, [
+    "promocion",
+    "PROMOCION",
+    "Promoción",
+    "Promocion"
+  ]);
+
+  const obsequioTexto = valor(item, [
+    "obsequio",
+    "OBSEQUIO",
+    "Obsequio"
+  ]);
 
   let obsequio = 0;
 
-  if (typeof obsequioRaw === "number") {
-
-    obsequio = obsequioRaw;
-
+  if (typeof obsequioTexto === "number") {
+    obsequio = obsequioTexto;
   } else {
+    const encontrado = String(obsequioTexto).match(/\d+/);
 
-    const match = String(obsequioRaw).match(/\d+/);
-
-    if (match) {
-      obsequio = Number(match[0]);
+    if (encontrado) {
+      obsequio = Number(encontrado[0]);
     }
-
   }
-
-
-  let promocion = getValue(
-    item,
-    [
-      "promocion",
-      "PROMOCION",
-      "Promoción",
-      "Promocion"
-    ]
-  );
-
 
   let paga = 0;
   let recibe = capacidad;
 
-
-  /*
-    Lee textos como:
-    PAGUE 32 Y LLEVE 36
-  */
-
   if (promocion) {
 
-    const numbers = String(promocion).match(/\d+/g);
+    const numeros = String(promocion).match(/\d+/g);
 
-    if (numbers && numbers.length >= 2) {
-
-      paga = Number(numbers[0]);
-
-      const promoRecibe = Number(numbers[1]);
-
-      /*
-        Si el segundo número tiene un error
-        de digitación y no coincide con la
-        capacidad, usamos la capacidad
-        registrada en la tabla.
-      */
-
-      if (
-        capacidad > 0 &&
-        promoRecibe < paga
-      ) {
-
-        recibe = capacidad;
-
-      } else {
-
-        recibe = promoRecibe;
-
-      }
-
+    if (numeros && numeros.length >= 2) {
+      paga = Number(numeros[0]);
+      recibe = Number(numeros[1]);
     }
-
   }
 
-
-  /*
-    Si no se logra calcular por la promoción,
-    usamos capacidad - obsequio
-  */
-
-  if (!paga && capacidad) {
-
+  if (!paga && capacidad && obsequio) {
     paga = capacidad - obsequio;
-
   }
 
   if (!recibe && capacidad) {
-
     recibe = capacidad;
-
   }
-
-  /*
-    Si el obsequio no está informado,
-    se calcula
-  */
 
   if (!obsequio && recibe && paga) {
-
     obsequio = recibe - paga;
-
   }
-
 
   return {
     marcaEquipo,
     linea,
-    modeloMotor,
     marcaMotor,
+    modeloMotor,
     capacidad,
-    promocion,
     paga,
     recibe,
     obsequio
   };
-
 }
 
 
 /* =========================
-   BUSCADOR
+   BUSCAR
 ========================= */
 
-searchInput.addEventListener(
-  "input",
-  function () {
+searchInput.addEventListener("input", function () {
 
-    const search = normalizeText(this.value);
+  const busqueda = normalizar(this.value);
 
-    if (search.length < 2) {
-
-      resultsContainer.innerHTML = "";
-
-      emptyState.style.display = "block";
-
-      return;
-
-    }
-
-
-    const terms = search
-      .split(" ")
-      .filter(Boolean);
-
-
-    const matches = promotions
-      .filter((item) => {
-
-        const promotion = parsePromotion(item);
-
-        const searchableText = normalizeText(
-          [
-            promotion.marcaEquipo,
-            promotion.linea,
-            promotion.modeloMotor,
-            promotion.marcaMotor
-          ].join(" ")
-        );
-
-
-        return terms.every(
-          (term) => searchableText.includes(term)
-        );
-
-      })
-      .slice(0, 20);
-
-
-    renderResults(matches);
-
-  }
-);
-
-
-/* =========================
-   PINTAR RESULTADOS
-========================= */
-
-function renderResults(items) {
-
-  if (!items.length) {
-
-    emptyState.style.display = "block";
-
-    emptyState.innerHTML = `
-      <div class="empty-icon">🔎</div>
-
-      <h3>No encontramos coincidencias</h3>
-
-      <p>
-        Intenta buscar solamente por una palabra.
-        Por ejemplo: X5000, Cummins, X12, T800 o Workstar.
-      </p>
-    `;
+  if (busqueda.length < 2) {
 
     resultsContainer.innerHTML = "";
 
-    return;
+    emptyState.style.display = "block";
 
+    return;
   }
 
 
+  const coincidencias = promociones
+    .map(item => prepararPromo(item))
+    .filter(promo => {
+
+      const texto = normalizar(
+        [
+          promo.marcaEquipo,
+          promo.linea,
+          promo.marcaMotor,
+          promo.modeloMotor
+        ].join(" ")
+      );
+
+      return texto.includes(busqueda);
+
+    })
+    .slice(0, 8);
+
+
+  mostrarOpciones(coincidencias);
+});
+
+
+/* =========================
+   MOSTRAR OPCIONES
+========================= */
+
+function mostrarOpciones(opciones) {
+
   emptyState.style.display = "none";
 
-  resultsContainer.innerHTML = items
-    .map((item) => {
+  if (!opciones.length) {
 
-      const promo = parsePromotion(item);
+    resultsContainer.innerHTML = `
+      <div class="no-results">
+        No encontramos coincidencias.
+        Intenta escribir solamente parte del modelo o motor.
+      </div>
+    `;
 
-      const vehicleName =
-        [
+    return;
+  }
+
+
+  resultsContainer.innerHTML = `
+    <div class="search-options">
+
+      ${opciones.map((promo, index) => {
+
+        const titulo = [
           promo.marcaEquipo,
           promo.linea
         ]
-          .filter(
-            value =>
-              value &&
-              value !== "-"
-          )
-          .join(" ") ||
-        promo.modeloMotor ||
-        "Motor";
+          .filter(Boolean)
+          .join(" ");
+
+        const motor = [
+          promo.marcaMotor,
+          promo.modeloMotor
+        ]
+          .filter(Boolean)
+          .join(" ");
+
+        return `
+          <button
+            class="vehicle-option"
+            onclick="seleccionarVehiculo(${index})"
+          >
+
+            <div class="vehicle-option-main">
+
+              <strong>
+                ${titulo || motor}
+              </strong>
+
+              ${
+                motor
+                  ? `<span>${motor}</span>`
+                  : ""
+              }
+
+            </div>
+
+            <div class="vehicle-arrow">
+              ›
+            </div>
+
+          </button>
+        `;
+
+      }).join("")}
+
+    </div>
+  `;
 
 
-      const vehicleInfo = [];
+  window.resultadosActuales = opciones;
+}
 
-      if (
-        promo.modeloMotor &&
-        promo.modeloMotor !== "-"
-      ) {
 
-        vehicleInfo.push(
-          `<span>Motor: <strong>${promo.modeloMotor}</strong></span>`
-        );
+/* =========================
+   SELECCIONAR VEHÍCULO
+========================= */
 
+function seleccionarVehiculo(index) {
+
+  const promo = window.resultadosActuales[index];
+
+  mostrarPromocion(promo);
+
+  window.scrollTo({
+    top: resultsContainer.offsetTop - 120,
+    behavior: "smooth"
+  });
+}
+
+
+/* =========================
+   MOSTRAR PROMOCIÓN
+========================= */
+
+function mostrarPromocion(promo) {
+
+  const titulo = [
+    promo.marcaEquipo,
+    promo.linea
+  ]
+    .filter(Boolean)
+    .join(" ");
+
+  const motor = [
+    promo.marcaMotor,
+    promo.modeloMotor
+  ]
+    .filter(Boolean)
+    .join(" ");
+
+
+  resultsContainer.innerHTML = `
+
+    <button
+      class="back-search"
+      onclick="volverABuscar()"
+    >
+      ← Buscar otro vehículo
+    </button>
+
+
+    <article class="promo-card">
+
+      <div class="promo-vehicle">
+
+        <span>
+          TU PROMOCIÓN DÍA NARANJA
+        </span>
+
+        <h3>
+          ${titulo || motor}
+        </h3>
+
+        ${
+          motor
+            ? `<p>${motor}</p>`
+            : ""
+        }
+
+      </div>
+
+
+      <div class="gulf-gift">
+
+        <span>
+          GULF TE DA
+        </span>
+
+        <strong>
+          +${promo.obsequio}
+        </strong>
+
+        <b>
+          CUARTO${promo.obsequio === 1 ? "" : "S"} ADICIONAL${promo.obsequio === 1 ? "" : "ES"}
+        </b>
+
+        <small>
+          para completar el servicio de tu motor
+        </small>
+
+      </div>
+
+
+      <div class="promo-summary">
+
+        <div>
+
+          <span>
+            TÚ PAGAS
+          </span>
+
+          <strong>
+            ${promo.paga}
+          </strong>
+
+          <small>
+            cuartos
+          </small>
+
+        </div>
+
+
+        <div class="promo-total">
+
+          <span>
+            RECIBES
+          </span>
+
+          <strong>
+            ${promo.recibe}
+          </strong>
+
+          <small>
+            cuartos
+          </small>
+
+        </div>
+
+      </div>
+
+
+      ${
+        promo.capacidad
+          ? `
+            <div class="motor-capacity">
+              Capacidad registrada:
+              <strong>${promo.capacidad} cuartos</strong>
+            </div>
+          `
+          : ""
       }
 
-
-      if (
-        promo.marcaMotor &&
-        promo.marcaMotor !== "-"
-      ) {
-
-        vehicleInfo.push(
-          `<span>Marca: <strong>${promo.marcaMotor}</strong></span>`
-        );
-
-      }
+    </article>
+  `;
+}
 
 
-      return `
-        <article class="result-card">
+/* =========================
+   VOLVER AL BUSCADOR
+========================= */
 
-          <div class="result-top">
+function volverABuscar() {
 
-            <span>
-              PROMOCIÓN DÍA NARANJA
-            </span>
+  searchInput.value = "";
 
-            <h3>
-              ${vehicleName}
-            </h3>
+  resultsContainer.innerHTML = "";
 
-            <div class="vehicle-data">
+  emptyState.style.display = "block";
 
-              ${vehicleInfo.join("")}
+  searchInput.focus();
 
-            </div>
-
-          </div>
-
-
-          <div class="gift-hero">
-
-            <span>
-              GULF TE DA
-            </span>
-
-            <b>
-              +${promo.obsequio}
-            </b>
-
-            <strong>
-              CUARTO${promo.obsequio === 1 ? "" : "S"} ADICIONAL${promo.obsequio === 1 ? "" : "ES"}
-            </strong>
-
-            <small>
-              para completar el servicio de tu motor
-            </small>
-
-          </div>
-
-
-          <div class="promo-numbers">
-
-            <div class="number-card">
-
-              <span>
-                TÚ PAGAS
-              </span>
-
-              <b>
-                ${promo.paga}
-              </b>
-
-              <small>
-                cuartos
-              </small>
-
-            </div>
-
-
-            <div class="number-card highlight">
-
-              <span>
-                RECIBES EN TOTAL
-              </span>
-
-              <b>
-                ${promo.recibe}
-              </b>
-
-              <small>
-                cuartos
-              </small>
-
-            </div>
-
-          </div>
-
-
-          ${
-            promo.capacidad
-              ? `
-                <div class="capacity">
-                  Capacidad registrada del motor:
-                  <strong>
-                    ${promo.capacidad} cuartos
-                  </strong>
-                </div>
-              `
-              : ""
-          }
-
-        </article>
-      `;
-
-    })
-    .join("");
-
+  window.scrollTo({
+    top: searchInput.offsetTop - 150,
+    behavior: "smooth"
+  });
 }
