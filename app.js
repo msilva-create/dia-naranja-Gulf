@@ -6,6 +6,34 @@ const emptyState = document.getElementById("emptyState");
 
 
 /* =========================
+   RANGOS DE CAPACIDAD
+========================= */
+
+const rangosCarter = [
+  {
+    min: 6,
+    max: 11,
+    texto: "Mayor o igual a 6 cuartos y menor o igual a 11 cuartos"
+  },
+  {
+    min: 16,
+    max: 22,
+    texto: "Mayor o igual a 16 cuartos y menor o igual a 22 cuartos"
+  },
+  {
+    min: 24,
+    max: 26,
+    texto: "Mayor o igual a 24 cuartos y menor o igual a 26 cuartos"
+  },
+  {
+    min: 30,
+    max: 48,
+    texto: "Mayor o igual a 30 cuartos y menor o igual a 48 cuartos"
+  }
+];
+
+
+/* =========================
    CARGAR BASE
 ========================= */
 
@@ -52,6 +80,20 @@ function valor(item, opciones) {
   }
 
   return "";
+}
+
+
+/* =========================
+   OBTENER RANGO
+========================= */
+
+function obtenerRango(capacidad) {
+
+  return rangosCarter.find(
+    rango =>
+      capacidad >= rango.min &&
+      capacidad <= rango.max
+  ) || null;
 }
 
 
@@ -119,12 +161,11 @@ function prepararPromo(item) {
   let obsequio = 0;
 
   if (typeof obsequioTexto === "number") {
-
     obsequio = obsequioTexto;
-
   } else {
 
-    const encontrado = String(obsequioTexto).match(/\d+/);
+    const encontrado =
+      String(obsequioTexto).match(/\d+/);
 
     if (encontrado) {
       obsequio = Number(encontrado[0]);
@@ -137,13 +178,12 @@ function prepararPromo(item) {
 
   if (promocion) {
 
-    const numeros = String(promocion).match(/\d+/g);
+    const numeros =
+      String(promocion).match(/\d+/g);
 
     if (numeros && numeros.length >= 2) {
-
       paga = Number(numeros[0]);
       recibe = Number(numeros[1]);
-
     }
 
   }
@@ -166,11 +206,11 @@ function prepararPromo(item) {
     recibe < paga &&
     capacidad
   ) {
-
     recibe = capacidad;
     obsequio = recibe - paga;
-
   }
+
+  const rango = obtenerRango(capacidad);
 
   return {
     marcaEquipo,
@@ -180,7 +220,8 @@ function prepararPromo(item) {
     capacidad,
     paga,
     recibe,
-    obsequio
+    obsequio,
+    rango
   };
 }
 
@@ -203,46 +244,86 @@ searchInput.addEventListener("input", function () {
 
 
   const numeroBuscado =
-    busqueda.match(/\d+(\.\d+)?/);
+    Number(
+      busqueda.match(/\d+(\.\d+)?/)?.[0]
+    );
 
-  const buscaCapacidad =
+  const esBusquedaNumerica =
     /^\d+(\.\d+)?$/.test(busqueda) ||
     busqueda.includes("cuarto") ||
     busqueda.includes("carter");
 
 
-  const coincidencias = promociones
-    .map(item => prepararPromo(item))
-    .filter(promo => {
-
-      if (
-        buscaCapacidad &&
-        numeroBuscado
-      ) {
-
-        const numero = Number(numeroBuscado[0]);
-
-        return promo.capacidad === numero;
-
-      }
+  let coincidencias = [];
 
 
-      const texto = normalizar(
-        [
-          promo.marcaEquipo,
-          promo.linea,
-          promo.marcaMotor,
-          promo.modeloMotor
-        ].join(" ")
-      );
+  /* =========================
+     BÚSQUEDA POR CAPACIDAD
+  ========================= */
 
-      return texto.includes(busqueda);
+  if (
+    esBusquedaNumerica &&
+    numeroBuscado
+  ) {
 
-    })
-    .slice(0, 20);
+    const rangoBuscado =
+      obtenerRango(numeroBuscado);
+
+    if (rangoBuscado) {
+
+      coincidencias = promociones
+        .map(item => prepararPromo(item))
+        .filter(promo => {
+
+          if (!promo.rango) {
+            return false;
+          }
+
+          return (
+            promo.rango.min === rangoBuscado.min &&
+            promo.rango.max === rangoBuscado.max
+          );
+
+        });
+
+    } else {
+
+      coincidencias = [];
+
+    }
+
+  }
 
 
-  mostrarOpciones(coincidencias);
+  /* =========================
+     BÚSQUEDA NORMAL
+  ========================= */
+
+  else {
+
+    coincidencias = promociones
+      .map(item => prepararPromo(item))
+      .filter(promo => {
+
+        const texto = normalizar(
+          [
+            promo.marcaEquipo,
+            promo.linea,
+            promo.marcaMotor,
+            promo.modeloMotor
+          ].join(" ")
+        );
+
+        return texto.includes(busqueda);
+
+      });
+
+  }
+
+
+  mostrarOpciones(
+    coincidencias.slice(0, 20)
+  );
 
 });
 
@@ -271,9 +352,15 @@ function mostrarOpciones(opciones) {
         </p>
 
         <span>
-          Ejemplo:
-          <strong>24 cuartos</strong>
+          Rangos disponibles:
         </span>
+
+        <div class="range-list">
+          <span>6 a 11 cuartos</span>
+          <span>16 a 22 cuartos</span>
+          <span>24 a 26 cuartos</span>
+          <span>30 a 48 cuartos</span>
+        </div>
 
       </div>
 
@@ -343,13 +430,18 @@ function mostrarOpciones(opciones) {
 
 
               ${
-                promo.capacidad
+                promo.rango
                   ? `
                     <div class="capacity-result">
-                      CAPACIDAD DEL CÁRTER:
+
+                      <span>
+                        CAPACIDAD DEL CÁRTER
+                      </span>
+
                       <strong>
-                        ${promo.capacidad} CUARTOS
+                        ${promo.rango.texto}
                       </strong>
+
                     </div>
                   `
                   : ""
@@ -453,6 +545,25 @@ function mostrarPromocion(promo) {
             : ""
         }
 
+
+        ${
+          promo.rango
+            ? `
+              <div class="selected-range">
+
+                <span>
+                  CAPACIDAD DEL CÁRTER
+                </span>
+
+                <strong>
+                  ${promo.rango.texto}
+                </strong>
+
+              </div>
+            `
+            : ""
+        }
+
       </div>
 
 
@@ -516,25 +627,6 @@ function mostrarPromocion(promo) {
 
 
       </div>
-
-
-      ${
-        promo.capacidad
-          ? `
-
-            <div class="motor-capacity">
-
-              CAPACIDAD DEL CÁRTER
-
-              <strong>
-                ${promo.capacidad} CUARTOS
-              </strong>
-
-            </div>
-
-          `
-          : ""
-      }
 
 
     </article>
