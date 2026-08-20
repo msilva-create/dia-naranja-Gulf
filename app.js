@@ -145,6 +145,7 @@ function prepararPromo(item) {
         .match(/\d+(\.\d+)?/)?.[0]
     ) || 0;
 
+
   const promocion = valor(item, [
     "promocion",
     "PROMOCION",
@@ -152,16 +153,20 @@ function prepararPromo(item) {
     "Promocion"
   ]);
 
+
   const obsequioTexto = valor(item, [
     "obsequio",
     "OBSEQUIO",
     "Obsequio"
   ]);
 
+
   let obsequio = 0;
 
   if (typeof obsequioTexto === "number") {
+
     obsequio = obsequioTexto;
+
   } else {
 
     const encontrado =
@@ -173,8 +178,10 @@ function prepararPromo(item) {
 
   }
 
+
   let paga = 0;
   let recibe = capacidad;
+
 
   if (promocion) {
 
@@ -188,6 +195,7 @@ function prepararPromo(item) {
 
   }
 
+
   if (!paga && capacidad && obsequio) {
     paga = capacidad - obsequio;
   }
@@ -200,17 +208,26 @@ function prepararPromo(item) {
     obsequio = recibe - paga;
   }
 
+
   if (
     recibe &&
     paga &&
     recibe < paga &&
     capacidad
   ) {
+
     recibe = capacidad;
     obsequio = recibe - paga;
+
   }
 
+
   const rango = obtenerRango(capacidad);
+
+  const esOtrasMarcas =
+    normalizar(marcaEquipo).includes("otras marcas") ||
+    normalizar(linea).includes("otros modelos");
+
 
   return {
     marcaEquipo,
@@ -221,7 +238,8 @@ function prepararPromo(item) {
     paga,
     recibe,
     obsequio,
-    rango
+    rango,
+    esOtrasMarcas
   };
 }
 
@@ -259,6 +277,7 @@ searchInput.addEventListener("input", function () {
 
   /* =========================
      BÚSQUEDA POR CAPACIDAD
+     SOLO OTRAS MARCAS
   ========================= */
 
   if (
@@ -269,11 +288,16 @@ searchInput.addEventListener("input", function () {
     const rangoBuscado =
       obtenerRango(numeroBuscado);
 
+
     if (rangoBuscado) {
 
       coincidencias = promociones
         .map(item => prepararPromo(item))
         .filter(promo => {
+
+          if (!promo.esOtrasMarcas) {
+            return false;
+          }
 
           if (!promo.rango) {
             return false;
@@ -336,6 +360,7 @@ function mostrarOpciones(opciones) {
 
   emptyState.style.display = "none";
 
+
   if (!opciones.length) {
 
     resultsContainer.innerHTML = `
@@ -350,17 +375,6 @@ function mostrarOpciones(opciones) {
           Intenta buscar por marca, modelo, motor
           o por la capacidad del cárter.
         </p>
-
-        <span>
-          Rangos disponibles:
-        </span>
-
-        <div class="range-list">
-          <span>6 a 11 cuartos</span>
-          <span>16 a 22 cuartos</span>
-          <span>24 a 26 cuartos</span>
-          <span>30 a 48 cuartos</span>
-        </div>
 
       </div>
 
@@ -378,6 +392,7 @@ function mostrarOpciones(opciones) {
     <div class="search-options">
 
       ${opciones.map((promo, index) => {
+
 
         const titulo = [
           promo.marcaEquipo,
@@ -418,6 +433,7 @@ function mostrarOpciones(opciones) {
 
 
               ${
+                !promo.esOtrasMarcas &&
                 motor &&
                 motor !== titulo
                   ? `
@@ -430,6 +446,7 @@ function mostrarOpciones(opciones) {
 
 
               ${
+                promo.esOtrasMarcas &&
                 promo.rango
                   ? `
                     <div class="capacity-result">
@@ -487,6 +504,7 @@ function seleccionarVehiculo(index) {
 
 function mostrarPromocion(promo) {
 
+
   const titulo = [
     promo.marcaEquipo,
     promo.linea
@@ -534,7 +552,9 @@ function mostrarPromocion(promo) {
           ${titulo || motor || "Otras Marcas"}
         </h3>
 
+
         ${
+          !promo.esOtrasMarcas &&
           motor &&
           motor !== titulo
             ? `
@@ -547,6 +567,7 @@ function mostrarPromocion(promo) {
 
 
         ${
+          promo.esOtrasMarcas &&
           promo.rango
             ? `
               <div class="selected-range">
@@ -589,44 +610,48 @@ function mostrarPromocion(promo) {
       </div>
 
 
-      <div class="promo-summary">
+      ${
+        !promo.esOtrasMarcas
+          ? `
+            <div class="promo-summary">
+
+              <div>
+
+                <span>
+                  TÚ PAGAS
+                </span>
+
+                <strong>
+                  ${promo.paga}
+                </strong>
+
+                <small>
+                  cuartos
+                </small>
+
+              </div>
 
 
-        <div>
+              <div class="promo-total">
 
-          <span>
-            TÚ PAGAS
-          </span>
+                <span>
+                  RECIBES
+                </span>
 
-          <strong>
-            ${promo.paga}
-          </strong>
+                <strong>
+                  ${promo.recibe}
+                </strong>
 
-          <small>
-            cuartos
-          </small>
+                <small>
+                  cuartos
+                </small>
 
-        </div>
+              </div>
 
-
-        <div class="promo-total">
-
-          <span>
-            RECIBES
-          </span>
-
-          <strong>
-            ${promo.recibe}
-          </strong>
-
-          <small>
-            cuartos
-          </small>
-
-        </div>
-
-
-      </div>
+            </div>
+          `
+          : ""
+      }
 
 
     </article>
