@@ -1,0 +1,290 @@
+[
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "motor": "Z14 CM2670 (NSVI)",
+    "capacidad": 47,
+    "paga": 43,
+    "recibe": 47,
+    "obsequio": 4
+  },
+  {
+    "marcaEquipo": "SHACMAN",
+    "linea": "SHC-X5000",
+    "motor": "X12 CM2670 (EURO 6)",
+    "capacidad": 36,
+    "paga": 32,
+    "recibe": 36,
+    "obsequio": 4
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "motor": "NT",
+    "capacidad": 44,
+    "paga": 40,
+    "recibe": 44,
+    "obsequio": 4
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "motor": "L9 CM2670 (NSVI)",
+    "capacidad": 34,
+    "paga": 30,
+    "recibe": 34,
+    "obsequio": 4
+  },
+  {
+    "marcaEquipo": "INTERNATIONAL",
+    "linea": "INT - WORKSTAR7600",
+    "motor": "L9 CM2450 (EPA 21)",
+    "capacidad": 30,
+    "paga": 26,
+    "recibe": 30,
+    "obsequio": 4
+  },
+  {
+    "marcaEquipo": "SHACMAN",
+    "linea": "SHC-X3000",
+    "motor": "ISZ13 CM2150 (EURO 5)",
+    "capacidad": 42,
+    "paga": 38,
+    "recibe": 42,
+    "obsequio": 4
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "INT- HX SERIES",
+    "motor": "ISX15 CM2250/2350(EURO 6)",
+    "capacidad": 48,
+    "paga": 44,
+    "recibe": 48,
+    "obsequio": 4
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "KW-T800",
+    "motor": "ISX15 CM2250/2350(EURO 6)",
+    "capacidad": 48,
+    "paga": 44,
+    "recibe": 48,
+    "obsequio": 4
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "KW-T880",
+    "motor": "ISX15 CM2250/2350(EURO 6)",
+    "capacidad": 48,
+    "paga": 44,
+    "recibe": 48,
+    "obsequio": 4
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "KW-T800",
+    "motor": "ISX CM570",
+    "capacidad": 48,
+    "paga": 44,
+    "recibe": 48,
+    "obsequio": 4
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "KW-T800",
+    "motor": "ISM11 CM876 (EURO 5)",
+    "capacidad": 40,
+    "paga": 36,
+    "recibe": 40,
+    "obsequio": 4
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "KW-T800",
+    "motor": "ISM 570 (EURO 4)",
+    "capacidad": 40,
+    "paga": 36,
+    "recibe": 40,
+    "obsequio": 4
+  },
+  {
+    "marcaEquipo": "INTERNATIONAL",
+    "linea": "INT - WORKSTAR7600",
+    "motor": "ISM 570 (EURO 4)",
+    "capacidad": 40,
+    "paga": 36,
+    "recibe": 40,
+    "obsequio": 4
+  },
+  {
+    "marcaEquipo": "INTERNATIONAL",
+    "linea": "INT - SERIES HV",
+    "motor": "ISL CM2150 (EURO 4)",
+    "capacidad": 24,
+    "paga": 21,
+    "recibe": 24,
+    "obsequio": 3
+  },
+  {
+    "marcaEquipo": "JAC",
+    "linea": "JAC - K7",
+    "motor": "ISG12 CM2880 (EURO 4)",
+    "capacidad": 38,
+    "paga": 34,
+    "recibe": 38,
+    "obsequio": 4
+  },
+  {
+    "marcaEquipo": "FOTON",
+    "linea": "FOTON - AUMAN S23",
+    "motor": "ISG12 CM2880 (EURO 4)",
+    "capacidad": 38,
+    "paga": 34,
+    "recibe": 38,
+    "obsequio": 4
+  },
+  {
+    "marcaEquipo": "FOTON",
+    "linea": "FOTON - AUMAN GTL MIXER",
+    "motor": "ISG11 CM2880 (EURO 4)",
+    "capacidad": 38,
+    "paga": 34,
+    "recibe": 38,
+    "obsequio": 4
+  },
+  {
+    "marcaEquipo": "JAC",
+    "linea": "JAC - JQR,JPR,JRR",
+    "motor": "ISF3.8 CM2220 (EURO3/4)",
+    "capacidad": 11,
+    "paga": 10,
+    "recibe": 11,
+    "obsequio": 1
+  },
+  {
+    "marcaEquipo": "FOTON",
+    "linea": "FOTON - AUMARK FRR, FPR, FQR",
+    "motor": "ISF3.8 CM2220 (EURO3/4)",
+    "capacidad": 11,
+    "paga": 10,
+    "recibe": 11,
+    "obsequio": 1
+  },
+  {
+    "marcaEquipo": "JAC",
+    "linea": "JAC - JKR",
+    "motor": "ISF2.8 CM2220 (EURO 3/4)",
+    "capacidad": 6,
+    "paga": 5,
+    "recibe": 6,
+    "obsequio": 1
+  },
+  {
+    "marcaEquipo": "FOTON",
+    "linea": "FOTON-TULAND",
+    "motor": "ISF2.8 CM2220 (EURO 3/4)",
+    "capacidad": 6,
+    "paga": 5,
+    "recibe": 6,
+    "obsequio": 1
+  },
+  {
+    "marcaEquipo": "FOTON",
+    "linea": "AUMAN BJ1133",
+    "motor": "ISF2.8 CM2220 (EURO 3/4)",
+    "capacidad": 6,
+    "paga": 5,
+    "recibe": 6,
+    "obsequio": 1
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "KW-T300",
+    "motor": "ISC CM850 (EURO 4)",
+    "capacidad": 24,
+    "paga": 21,
+    "recibe": 24,
+    "obsequio": 3
+  },
+  {
+    "marcaEquipo": "YUTONG",
+    "linea": "YU- ZK6107HA",
+    "motor": "ISBE CM2150 (EURO 4)",
+    "capacidad": 26,
+    "paga": 23,
+    "recibe": 26,
+    "obsequio": 3
+  },
+  {
+    "marcaEquipo": "FOTON",
+    "linea": "FOTON - AUMARK FRR, FPR, FQR",
+    "motor": "F3.8 CM2620 (EURO 6)",
+    "capacidad": 11,
+    "paga": 10,
+    "recibe": 11,
+    "obsequio": 1
+  },
+  {
+    "marcaEquipo": "FOTON",
+    "linea": "FOTON - AUMARK FHR,FKR",
+    "motor": "F2.5 CM2620 (EURO 6)",
+    "capacidad": 6,
+    "paga": 5,
+    "recibe": 6,
+    "obsequio": 1
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "motor": "D6.7 CM2670 (NSVI)",
+    "capacidad": 22,
+    "paga": 20,
+    "recibe": 22,
+    "obsequio": 2
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "KW-T370",
+    "motor": "B6.7 CM2450 B155B (EPA 21)",
+    "capacidad": 16,
+    "paga": 14,
+    "recibe": 16,
+    "obsequio": 2
+  },
+  {
+    "marcaEquipo": "FOTON",
+    "linea": "FOTON - FRR-PREMIUM",
+    "motor": "B4.5 CM2620 (EURO 6)",
+    "capacidad": 17,
+    "paga": 15,
+    "recibe": 17,
+    "obsequio": 2
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "motor": "B4.0 CM2620 (NSVI)",
+    "capacidad": 17,
+    "paga": 15,
+    "recibe": 17,
+    "obsequio": 2
+  },
+  {
+    "marcaEquipo": "VOLKSWAGEN",
+    "linea": "VW-WORKER",
+    "motor": "6CT",
+    "capacidad": 24,
+    "paga": 21,
+    "recibe": 24,
+    "obsequio": 3
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "motor": "",
+    "capacidad": 44,
+    "paga": 40,
+    "recibe": 44,
+    "obsequio": 4
+  }
+]
