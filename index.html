@@ -1,106 +1,240 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#f26722" />
-  <meta name="description" content="Consulta la promoción Días Naranja Gulf según tu vehículo, motor o capacidad de cárter." />
-  <title>Días Naranja Gulf | Consulta tu promoción</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Consulta la promoción Días Naranja Gulf para tu vehículo o motor."
+  />
+
+  <title>Días Naranja | Gulf Colombia</title>
+
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <header class="topbar">
-    <div class="brand-pill"><span class="brand-dot"></span><strong>Gulf</strong> Días Naranja</div>
-    <span class="schedule">Todos los <strong>MARTES Y JUEVES</strong></span>
+
+  <!-- HERO -->
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <div class="campaign-tag">
+        DÍAS NARANJA GULF
+      </div>
+
+      <h1>
+        ¡Es tu momento de <span>cambiarte a Gulf!</span> 🟠
+      </h1>
+
+      <h2>
+        En Días Naranja, Gulf te da más.
+      </h2>
+
+      <p class="hero-description">
+        Realiza tu cambio de aceite con Gulf y
+        <strong>
+          recibe cuartos adicionales para completar el servicio de tu motor.
+        </strong>
+      </p>
+
+      <p class="hero-cta">
+        Busca tu vehículo y descubre cuántos cuartos te da Gulf.
+      </p>
+
+      <div class="days">
+        <span>✓ MARTES</span>
+        <span>✓ JUEVES</span>
+        <span>✓ GULF TE DA MÁS</span>
+      </div>
+
+    </div>
+
   </header>
 
-  <main>
-    <section class="hero shell">
-      <div class="hero-copy">
-        <span class="eyebrow">🟠 DÍAS NARANJA</span>
-        <h1>Descubre cuántos <span>cuartos te regalamos</span></h1>
-        <p>Busca por marca, modelo o motor. Te mostramos de inmediato la promoción que aplica para completar el servicio de tu motor.</p>
-        <div class="hero-badges">
-          <span>✓ Consulta rápida</span><span>✓ Sin registro</span><span>✓ Desde el celular</span>
-        </div>
+
+  <!-- IMAGEN CAMPAÑA -->
+  <section class="campaign-image-section">
+
+    <img
+      src="assets/campana-dia-naranja.jpg"
+      alt="Días Naranja Gulf - Todos los martes y jueves"
+      class="campaign-image"
+    />
+
+  </section>
+
+
+  <!-- BUSCADOR -->
+  <main class="main-container">
+
+    <section class="search-section">
+
+      <div class="section-label">
+        ENCUENTRA TU PROMOCIÓN
       </div>
-      <div class="campaign-card" aria-label="Campaña Días Naranja Gulf">
-        <img src="assets/recordatorio-dia-naranja.jpg" alt="Campaña Días Naranja Gulf" />
+
+      <h2>
+        ¿Qué vehículo o motor tienes?
+      </h2>
+
+      <p>
+        Puedes buscar por marca del vehículo, modelo, línea o referencia del motor.
+      </p>
+
+      <div class="search-box">
+
+        <span class="search-icon">🔎</span>
+
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Ej: X5000, Cummins, X12, T800..."
+          autocomplete="off"
+        />
+
       </div>
+
+      <div id="results" class="results"></div>
+
+      <div id="emptyState" class="empty-state">
+
+        <div class="empty-icon">🛢️</div>
+
+        <h3>
+          Busca tu vehículo
+        </h3>
+
+        <p>
+          Escribe el modelo de tu vehículo o motor para conocer el beneficio
+          que Gulf tiene para ti.
+        </p>
+
+      </div>
+
     </section>
 
-    <section class="finder shell" id="consulta">
-      <div class="panel">
-        <div class="panel-head">
-          <div>
-            <span class="section-kicker">CONSULTA TU PROMOCIÓN</span>
-            <h2>¿Qué vehículo o motor tienes?</h2>
-          </div>
-          <span class="step">1</span>
-        </div>
 
-        <label class="searchbox" for="searchInput">
-          <span class="search-icon">⌕</span>
-          <input id="searchInput" autocomplete="off" placeholder="Ej. X5000, T800, Cummins X12, Workstar..." />
-          <button id="clearBtn" class="clear-btn" aria-label="Limpiar búsqueda" type="button">×</button>
-        </label>
-        <p class="helper">Puedes escribir la <strong>marca del vehículo</strong>, la <strong>línea/modelo</strong> o el <strong>motor</strong>.</p>
+    <!-- EXPLICACIÓN -->
+    <section class="about-section">
 
-        <div class="quick-actions">
-          <button class="ghost-btn" id="browseBtn" type="button">Ver todos los vehículos</button>
-          <button class="ghost-btn" id="capacityBtn" type="button">Solo sé cuántos cuartos usa</button>
-        </div>
+      <div class="about-header">
 
-        <div id="capacityBox" class="capacity-box hidden">
-          <label for="capacitySelect">Capacidad aproximada del cárter</label>
-          <div class="capacity-row">
-            <select id="capacitySelect">
-              <option value="">Selecciona...</option>
-            </select>
-            <button id="capacitySearchBtn" class="orange-btn" type="button">Consultar</button>
-          </div>
-        </div>
+        <span>
+          ¿QUÉ SON LOS DÍAS NARANJA?
+        </span>
 
-        <div id="results" class="results" aria-live="polite"></div>
+        <h2>
+          Cambiarte a Gulf te da más.
+        </h2>
+
+        <p>
+          Los martes y jueves realiza tu cambio de aceite con Gulf.
+          Según la capacidad de tu motor,
+          <strong>
+            tú compras una parte de los cuartos y Gulf te da cuartos adicionales
+          </strong>
+          para completar la cantidad definida para tu servicio.
+        </p>
+
       </div>
 
-      <aside id="promoPanel" class="promo-panel empty">
-        <div class="promo-placeholder">
-          <div class="orange-orb">+</div>
-          <h3>Tu beneficio aparece aquí</h3>
-          <p>Selecciona un resultado para conocer cuánto pagas y cuántos cuartos recibes.</p>
-        </div>
-      </aside>
+
+      <div class="steps">
+
+        <article>
+
+          <div class="step-number">01</div>
+
+          <h3>
+            Busca tu vehículo
+          </h3>
+
+          <p>
+            Escribe la marca, línea, modelo o referencia de tu motor.
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <div class="step-number">02</div>
+
+          <h3>
+            Descubre cuánto te da Gulf
+          </h3>
+
+          <p>
+            Te mostramos primero los cuartos adicionales que recibes con
+            tu promoción.
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <div class="step-number">03</div>
+
+          <h3>
+            Realiza tu cambio
+          </h3>
+
+          <p>
+            Aprovecha el beneficio de Días Naranja y realiza tu servicio
+            con Gulf.
+          </p>
+
+        </article>
+
+      </div>
+
     </section>
 
-    <section class="how shell">
-      <div class="how-title"><span>Así de fácil</span><h2>Consulta. Elige. Aprovecha.</h2></div>
-      <div class="steps-grid">
-        <article><b>01</b><h3>Busca tu vehículo</h3><p>Escribe marca, línea, modelo o referencia del motor.</p></article>
-        <article><b>02</b><h3>Revisa el beneficio</h3><p>Te mostramos los cuartos que pagas y los que Gulf te obsequia.</p></article>
-        <article><b>03</b><h3>Valida con tu asesor</h3><p>Confirma la aplicación y realiza tu servicio durante Días Naranja.</p></article>
-      </div>
-    </section>
   </main>
 
+
+  <!-- FOOTER -->
   <footer>
-    <div class="shell footer-inner">
-      <div class="footer-brand"><strong>Gulf Días Naranja</strong><br><span>+ Cambios · + Beneficios</span></div>
-      <div class="footer-social">
-        <strong>Síguenos y conoce más de Gulf</strong>
-        <div class="social-links">
-          <a href="https://www.instagram.com/gulfoilcolombia/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram de Gulf Colombia">Instagram · @gulfoilcolombia ↗</a>
-          <a href="https://gulfcolombia.com/" target="_blank" rel="noopener noreferrer" aria-label="Abrir sitio web de Gulf Colombia">gulfcolombia.com ↗</a>
-        </div>
-        <p>La capacidad de aceite puede variar según configuración, año y aplicación del motor. Confirma la referencia y cantidad con tu asesor antes del servicio.</p>
-      </div>
+
+    <div class="footer-brand">
+
+      <strong>
+        GULF COLOMBIA
+      </strong>
+
+      <p>
+        Conoce más de Gulf y mantente conectado con nosotros.
+      </p>
+
     </div>
+
+    <div class="social-links">
+
+      <a
+        href="https://www.instagram.com/gulfoilcolombia/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        📸 @gulfoilcolombia
+      </a>
+
+      <a
+        href="https://gulfcolombia.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        🌐 gulfcolombia.com
+      </a>
+
+    </div>
+
   </footer>
 
-  <div id="toast" class="toast" role="status"></div>
-  <script src="app.js" defer></script>
+
+  <script src="app.js"></script>
+
 </body>
 </html>
