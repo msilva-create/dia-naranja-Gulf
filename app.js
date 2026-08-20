@@ -103,7 +103,6 @@ function prepararPromo(item) {
         .match(/\d+(\.\d+)?/)?.[0]
     ) || 0;
 
-
   const promocion = valor(item, [
     "promocion",
     "PROMOCION",
@@ -111,13 +110,11 @@ function prepararPromo(item) {
     "Promocion"
   ]);
 
-
   const obsequioTexto = valor(item, [
     "obsequio",
     "OBSEQUIO",
     "Obsequio"
   ]);
-
 
   let obsequio = 0;
 
@@ -127,8 +124,7 @@ function prepararPromo(item) {
 
   } else {
 
-    const encontrado =
-      String(obsequioTexto).match(/\d+/);
+    const encontrado = String(obsequioTexto).match(/\d+/);
 
     if (encontrado) {
       obsequio = Number(encontrado[0]);
@@ -136,15 +132,12 @@ function prepararPromo(item) {
 
   }
 
-
   let paga = 0;
   let recibe = capacidad;
 
-
   if (promocion) {
 
-    const numeros =
-      String(promocion).match(/\d+/g);
+    const numeros = String(promocion).match(/\d+/g);
 
     if (numeros && numeros.length >= 2) {
 
@@ -154,12 +147,6 @@ function prepararPromo(item) {
     }
 
   }
-
-
-  /*
-    Si la promoción no tiene los datos completos,
-    calculamos con capacidad y obsequio.
-  */
 
   if (!paga && capacidad && obsequio) {
     paga = capacidad - obsequio;
@@ -173,13 +160,6 @@ function prepararPromo(item) {
     obsequio = recibe - paga;
   }
 
-
-  /*
-    Protección para errores de digitación:
-    si "recibe" es menor que "paga",
-    usamos la capacidad del cárter.
-  */
-
   if (
     recibe &&
     paga &&
@@ -191,7 +171,6 @@ function prepararPromo(item) {
     obsequio = recibe - paga;
 
   }
-
 
   return {
     marcaEquipo,
@@ -210,90 +189,62 @@ function prepararPromo(item) {
    BUSCAR
 ========================= */
 
-searchInput.addEventListener(
-  "input",
-  function () {
+searchInput.addEventListener("input", function () {
 
-    const busqueda =
-      normalizar(this.value);
+  const busqueda = normalizar(this.value);
 
-    if (!busqueda) {
+  if (!busqueda) {
 
-      resultsContainer.innerHTML = "";
-      emptyState.style.display = "block";
+    resultsContainer.innerHTML = "";
+    emptyState.style.display = "block";
 
-      return;
-
-    }
-
-
-    /*
-      Detectamos si la persona está buscando
-      por capacidad.
-
-      Ejemplos:
-      24
-      24 cuartos
-      carter 24
-      cárter 24
-    */
-
-    const numeroBuscado =
-      busqueda.match(/\d+(\.\d+)?/);
-
-    const buscaCapacidad =
-      /^\d+(\.\d+)?$/.test(busqueda) ||
-      busqueda.includes("cuarto") ||
-      busqueda.includes("carter");
-
-
-    const coincidencias = promociones
-      .map(item => prepararPromo(item))
-      .filter(promo => {
-
-        /*
-          BÚSQUEDA POR CAPACIDAD
-        */
-
-        if (
-          buscaCapacidad &&
-          numeroBuscado
-        ) {
-
-          const numero =
-            Number(numeroBuscado[0]);
-
-          return promo.capacidad === numero;
-
-        }
-
-
-        /*
-          BÚSQUEDA NORMAL
-          marca + línea + motor
-        */
-
-        const texto =
-          normalizar(
-            [
-              promo.marcaEquipo,
-              promo.linea,
-              promo.marcaMotor,
-              promo.modeloMotor
-            ].join(" ")
-          );
-
-
-        return texto.includes(busqueda);
-
-      })
-      .slice(0, 12);
-
-
-    mostrarOpciones(coincidencias);
-
+    return;
   }
-);
+
+
+  const numeroBuscado =
+    busqueda.match(/\d+(\.\d+)?/);
+
+  const buscaCapacidad =
+    /^\d+(\.\d+)?$/.test(busqueda) ||
+    busqueda.includes("cuarto") ||
+    busqueda.includes("carter");
+
+
+  const coincidencias = promociones
+    .map(item => prepararPromo(item))
+    .filter(promo => {
+
+      if (
+        buscaCapacidad &&
+        numeroBuscado
+      ) {
+
+        const numero = Number(numeroBuscado[0]);
+
+        return promo.capacidad === numero;
+
+      }
+
+
+      const texto = normalizar(
+        [
+          promo.marcaEquipo,
+          promo.linea,
+          promo.marcaMotor,
+          promo.modeloMotor
+        ].join(" ")
+      );
+
+      return texto.includes(busqueda);
+
+    })
+    .slice(0, 20);
+
+
+  mostrarOpciones(coincidencias);
+
+});
 
 
 /* =========================
@@ -303,7 +254,6 @@ searchInput.addEventListener(
 function mostrarOpciones(opciones) {
 
   emptyState.style.display = "none";
-
 
   if (!opciones.length) {
 
@@ -315,37 +265,21 @@ function mostrarOpciones(opciones) {
           No encontramos coincidencias.
         </strong>
 
-        <br><br>
+        <p>
+          Intenta buscar por marca, modelo, motor
+          o por la capacidad del cárter.
+        </p>
 
-        Puedes buscar por:
-
-        <br>
-
-        • Marca del vehículo
-
-        <br>
-
-        • Modelo
-
-        <br>
-
-        • Motor
-
-        <br>
-
-        • Capacidad del cárter
-
-        <br><br>
-
-        Ejemplo:
-        <strong>24</strong>
+        <span>
+          Ejemplo:
+          <strong>24 cuartos</strong>
+        </span>
 
       </div>
 
     `;
 
     return;
-
   }
 
 
@@ -357,7 +291,6 @@ function mostrarOpciones(opciones) {
     <div class="search-options">
 
       ${opciones.map((promo, index) => {
-
 
         const titulo = [
           promo.marcaEquipo,
@@ -392,8 +325,8 @@ function mostrarOpciones(opciones) {
 
             <div class="vehicle-option-main">
 
-              <strong>
-                ${titulo || motor || "Motor"}
+              <strong class="vehicle-title">
+                ${titulo || motor || "Otras Marcas"}
               </strong>
 
 
@@ -401,7 +334,7 @@ function mostrarOpciones(opciones) {
                 motor &&
                 motor !== titulo
                   ? `
-                    <span>
+                    <span class="vehicle-motor">
                       ${motor}
                     </span>
                   `
@@ -412,10 +345,12 @@ function mostrarOpciones(opciones) {
               ${
                 promo.capacidad
                   ? `
-                    <small>
-                      Capacidad:
-                      ${promo.capacidad} cuartos
-                    </small>
+                    <div class="capacity-result">
+                      CAPACIDAD DEL CÁRTER:
+                      <strong>
+                        ${promo.capacidad} CUARTOS
+                      </strong>
+                    </div>
                   `
                   : ""
               }
@@ -459,7 +394,6 @@ function seleccionarVehiculo(index) {
 ========================= */
 
 function mostrarPromocion(promo) {
-
 
   const titulo = [
     promo.marcaEquipo,
@@ -505,9 +439,8 @@ function mostrarPromocion(promo) {
         </span>
 
         <h3>
-          ${titulo || motor || "Tu motor"}
+          ${titulo || motor || "Otras Marcas"}
         </h3>
-
 
         ${
           motor &&
@@ -534,10 +467,8 @@ function mostrarPromocion(promo) {
         </strong>
 
         <b>
-
           CUARTO${promo.obsequio === 1 ? "" : "S"}
           ADICIONAL${promo.obsequio === 1 ? "" : "ES"}
-
         </b>
 
         <small>
@@ -593,10 +524,10 @@ function mostrarPromocion(promo) {
 
             <div class="motor-capacity">
 
-              Capacidad del cárter:
+              CAPACIDAD DEL CÁRTER
 
               <strong>
-                ${promo.capacidad} cuartos
+                ${promo.capacidad} CUARTOS
               </strong>
 
             </div>
