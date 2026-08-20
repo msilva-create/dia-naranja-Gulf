@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <meta
     name="description"
     content="Consulta la promoción Días Naranja Gulf para tu vehículo o motor."
@@ -44,9 +45,19 @@
       </p>
 
       <div class="days">
-        <span>✓ MARTES</span>
-        <span>✓ JUEVES</span>
-        <span>✓ GULF TE DA MÁS</span>
+
+        <span>
+          ✓ MARTES
+        </span>
+
+        <span>
+          ✓ JUEVES
+        </span>
+
+        <span>
+          ✓ GULF TE DA MÁS
+        </span>
+
       </div>
 
     </div>
@@ -66,9 +77,11 @@
   </section>
 
 
-  <!-- BUSCADOR -->
+  <!-- CONTENIDO -->
   <main class="main-container">
 
+
+    <!-- BUSCADOR -->
     <section class="search-section">
 
       <div class="section-label">
@@ -83,24 +96,77 @@
         Puedes buscar por marca del vehículo, modelo, línea o referencia del motor.
       </p>
 
+
+      <!-- CAMPO DE BÚSQUEDA -->
       <div class="search-box">
 
-        <span class="search-icon">🔎</span>
+        <span class="search-icon">
+          🔎
+        </span>
 
         <input
           type="text"
           id="searchInput"
           placeholder="Ej: X5000, Cummins, X12, T800..."
           autocomplete="off"
+          inputmode="search"
         />
 
       </div>
 
-      <div id="results" class="results"></div>
 
-      <div id="emptyState" class="empty-state">
+      <!-- AYUDA PARA BÚSQUEDA POR CAPACIDAD -->
+      <div
+        style="
+          margin-top: 14px;
+          padding: 12px 14px;
+          border-radius: 12px;
+          background: #f4f8fb;
+          font-size: 13px;
+          line-height: 1.45;
+          color: #657b8f;
+        "
+      >
 
-        <div class="empty-icon">🛢️</div>
+        <strong
+          style="
+            display: block;
+            margin-bottom: 3px;
+            color: #003b71;
+          "
+        >
+          ¿No encuentras tu vehículo?
+        </strong>
+
+        También puedes buscar por la
+        <strong style="color:#003b71;">
+          capacidad del cárter.
+        </strong>
+
+        Ejemplo:
+        <strong style="color:#f58220;">
+          24 cuartos
+        </strong>.
+
+      </div>
+
+
+      <!-- RESULTADOS -->
+      <div
+        id="results"
+        class="results"
+      ></div>
+
+
+      <!-- ESTADO INICIAL -->
+      <div
+        id="emptyState"
+        class="empty-state"
+      >
+
+        <div class="empty-icon">
+          🛢️
+        </div>
 
         <h3>
           Busca tu vehículo
@@ -111,9 +177,22 @@
           que Gulf tiene para ti.
         </p>
 
+        <p
+          style="
+            margin-top: 8px;
+            font-size: 13px;
+          "
+        >
+          Si no aparece, prueba buscando por la
+          <strong>
+            capacidad del cárter.
+          </strong>
+        </p>
+
       </div>
 
     </section>
+
 
 
     <!-- EXPLICACIÓN -->
@@ -131,21 +210,30 @@
 
         <p>
           Los martes y jueves realiza tu cambio de aceite con Gulf.
+
           Según la capacidad de tu motor,
+
           <strong>
             tú compras una parte de los cuartos y Gulf te da cuartos adicionales
           </strong>
+
           para completar la cantidad definida para tu servicio.
         </p>
 
       </div>
 
 
+
+      <!-- PASOS -->
       <div class="steps">
 
+
+        <!-- PASO 1 -->
         <article>
 
-          <div class="step-number">01</div>
+          <div class="step-number">
+            01
+          </div>
 
           <h3>
             Busca tu vehículo
@@ -158,9 +246,13 @@
         </article>
 
 
+
+        <!-- PASO 2 -->
         <article>
 
-          <div class="step-number">02</div>
+          <div class="step-number">
+            02
+          </div>
 
           <h3>
             Descubre cuánto te da Gulf
@@ -174,9 +266,13 @@
         </article>
 
 
+
+        <!-- PASO 3 -->
         <article>
 
-          <div class="step-number">03</div>
+          <div class="step-number">
+            03
+          </div>
 
           <h3>
             Realiza tu cambio
@@ -189,11 +285,13 @@
 
         </article>
 
+
       </div>
 
     </section>
 
   </main>
+
 
 
   <!-- FOOTER -->
@@ -211,8 +309,11 @@
 
     </div>
 
+
     <div class="social-links">
 
+
+      <!-- INSTAGRAM -->
       <a
         href="https://www.instagram.com/gulfoilcolombia/"
         target="_blank"
@@ -221,6 +322,8 @@
         📸 @gulfoilcolombia
       </a>
 
+
+      <!-- WEB -->
       <a
         href="https://gulfcolombia.com/"
         target="_blank"
@@ -229,11 +332,13 @@
         🌐 gulfcolombia.com
       </a>
 
+
     </div>
 
   </footer>
 
 
+  <!-- JAVASCRIPT -->
   <script src="app.js"></script>
 
 </body>
