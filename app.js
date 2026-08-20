@@ -6,7 +6,7 @@ const emptyState = document.getElementById("emptyState");
 
 
 /* ==========================================
-   RANGOS MANUALES - OTRAS MARCAS
+   RANGOS DE CÁRTER - OTRAS MARCAS
 ========================================== */
 
 const rangosCarter = [
@@ -49,7 +49,7 @@ fetch("data.json")
 
 
 /* ==========================================
-   NORMALIZAR
+   NORMALIZAR TEXTO
 ========================================== */
 
 function normalizar(texto) {
@@ -84,7 +84,24 @@ function valor(item, opciones) {
 
 
 /* ==========================================
-   PREPARAR PROMOCIÓN NORMAL
+   IDENTIFICAR OTRAS MARCAS
+========================================== */
+
+function esRegistroOtrasMarcas(item) {
+
+  const textoCompleto = normalizar(
+    Object.values(item).join(" ")
+  );
+
+  return (
+    textoCompleto.includes("otras marcas") ||
+    textoCompleto.includes("otros modelos")
+  );
+}
+
+
+/* ==========================================
+   PREPARAR PROMOCIÓN
 ========================================== */
 
 function prepararPromo(item) {
@@ -211,7 +228,7 @@ function prepararPromo(item) {
 
 
 /* ==========================================
-   ENCONTRAR RANGO
+   ENCONTRAR RANGO POR CAPACIDAD
 ========================================== */
 
 function encontrarRango(numero) {
@@ -246,11 +263,15 @@ searchInput.addEventListener("input", function () {
   emptyState.style.display = "none";
 
 
-  /* OTRAS MARCAS */
+  /* ======================================
+     SI ESCRIBE OTR / OTRA / OTRAS...
+     MOSTRAR RANGOS DE CÁRTER
+  ====================================== */
 
   if (
-    busqueda.includes("otra") ||
-    busqueda.includes("otras")
+    busqueda === "otr" ||
+    busqueda.startsWith("otra") ||
+    busqueda.startsWith("otro")
   ) {
 
     mostrarRangos(rangosCarter);
@@ -259,14 +280,15 @@ searchInput.addEventListener("input", function () {
   }
 
 
-  /* BÚSQUEDA POR CAPACIDAD */
+  /* ======================================
+     SI ESCRIBE SOLO UN NÚMERO
+  ====================================== */
 
   if (/^\d+$/.test(busqueda)) {
 
     const numero = Number(busqueda);
 
-    const rango =
-      encontrarRango(numero);
+    const rango = encontrarRango(numero);
 
 
     if (rango) {
@@ -283,20 +305,21 @@ searchInput.addEventListener("input", function () {
   }
 
 
-  /* VEHÍCULOS Y MOTORES */
+  /* ======================================
+     BÚSQUEDA NORMAL
+  ====================================== */
 
   const coincidencias = promociones
+
+    /* QUITAR COMPLETAMENTE OTRAS MARCAS */
+
+    .filter(item => {
+      return !esRegistroOtrasMarcas(item);
+    })
+
     .map(item => prepararPromo(item))
+
     .filter(promo => {
-
-      const esOtrasMarcas =
-        normalizar(promo.marcaEquipo).includes("otras marcas") ||
-        normalizar(promo.linea).includes("otros modelos");
-
-      if (esOtrasMarcas) {
-        return false;
-      }
-
 
       const texto = normalizar(
         [
@@ -307,10 +330,10 @@ searchInput.addEventListener("input", function () {
         ].join(" ")
       );
 
-
       return texto.includes(busqueda);
 
     })
+
     .slice(0, 15);
 
 
@@ -320,7 +343,7 @@ searchInput.addEventListener("input", function () {
 
 
 /* ==========================================
-   MOSTRAR RANGOS
+   MOSTRAR RANGOS DE CÁRTER
 ========================================== */
 
 function mostrarRangos(rangos) {
@@ -397,12 +420,11 @@ function mostrarRangos(rangos) {
 
 function seleccionarRango(min, max) {
 
-  const rango =
-    rangosCarter.find(
-      r =>
-        r.min === min &&
-        r.max === max
-    );
+  const rango = rangosCarter.find(
+    r =>
+      r.min === min &&
+      r.max === max
+  );
 
 
   if (!rango) {
@@ -416,7 +438,7 @@ function seleccionarRango(min, max) {
 
 
 /* ==========================================
-   PROMOCIÓN OTRAS MARCAS
+   PROMOCIÓN POR CÁRTER
 ========================================== */
 
 function mostrarPromocionRango(rango) {
@@ -509,14 +531,14 @@ function mostrarVehiculos(opciones) {
         </strong>
 
         <p>
-          Intenta escribir parte del modelo,
-          marca o referencia del motor.
+          Intenta escribir parte de la marca,
+          modelo o referencia del motor.
         </p>
 
         <p>
-          También puedes escribir
+          Si no lo encuentras, escribe
           <strong>Otras Marcas</strong>
-          o la capacidad del cárter.
+          o directamente la capacidad del cárter.
         </p>
 
       </div>
@@ -621,7 +643,7 @@ function seleccionarVehiculo(index) {
 
 
 /* ==========================================
-   PROMOCIÓN VEHÍCULO
+   PROMOCIÓN VEHÍCULO ESPECÍFICO
 ========================================== */
 
 function mostrarPromocionVehiculo(promo) {
@@ -771,17 +793,14 @@ function mostrarSinResultadosCapacidad() {
       </strong>
 
       <p>
-        Puedes consultar:
+        Los rangos disponibles son:
       </p>
 
       <div class="mini-ranges">
 
         <span>Cárter de 6 a 11 cuartos</span>
-
         <span>Cárter de 16 a 22 cuartos</span>
-
         <span>Cárter de 24 a 26 cuartos</span>
-
         <span>Cárter de 30 a 48 cuartos</span>
 
       </div>
