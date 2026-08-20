@@ -1,290 +1,1352 @@
 [
   {
-    "marcaEquipo": "",
-    "linea": "",
-    "motor": "Z14 CM2670 (NSVI)",
+    "marcaEquipo": "-",
+    "linea": "-",
+    "modeloMotor": "Z14 CM2670 (NSVI)",
+    "marcaMotor": "Chevron Delo 400 SDE",
     "capacidad": 47,
-    "paga": 43,
-    "recibe": 47,
-    "obsequio": 4
+    "promocion": "PAGUE 43 Y LLEVE 47",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "-",
+    "linea": "-",
+    "modeloMotor": "Z14 CM2670 (NSVI)",
+    "marcaMotor": "MOBIL DELVAC MODERN",
+    "capacidad": 47,
+    "promocion": "PAGUE 43 Y LLEVE 47",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
   },
   {
     "marcaEquipo": "SHACMAN",
     "linea": "SHC-X5000",
-    "motor": "X12 CM2670 (EURO 6)",
+    "modeloMotor": "X12 CM2670 (EURO 6)",
+    "marcaMotor": "Chevron Delo 400 SDE",
     "capacidad": 36,
-    "paga": 32,
-    "recibe": 36,
-    "obsequio": 4
+    "promocion": "PAGUE 32 Y LLEVE 36",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
   },
   {
-    "marcaEquipo": "",
-    "linea": "",
-    "motor": "NT",
+    "marcaEquipo": "SHACMAN",
+    "linea": "SHC-X5000",
+    "modeloMotor": "X12 CM2670 (EURO 6)",
+    "marcaMotor": "MOBIL DELVAC MODERN",
+    "capacidad": 36,
+    "promocion": "PAGUE 32 Y LLEVE 36",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "-",
+    "linea": "-",
+    "modeloMotor": "NT",
+    "marcaMotor": "valvoline premium blue 7800 plus",
     "capacidad": 44,
-    "paga": 40,
-    "recibe": 44,
-    "obsequio": 4
+    "promocion": "PAGUE 40 Y LLEVE 4",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
   },
   {
-    "marcaEquipo": "",
-    "linea": "",
-    "motor": "L9 CM2670 (NSVI)",
+    "marcaEquipo": "-",
+    "linea": "-",
+    "modeloMotor": "L9 CM2670 (NSVI)",
+    "marcaMotor": "Chevron Delo 400 SDE",
     "capacidad": 34,
-    "paga": 30,
-    "recibe": 34,
-    "obsequio": 4
+    "promocion": "PAGUE 30 Y LLEVE 34",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "-",
+    "linea": "-",
+    "modeloMotor": "L9 CM2670 (NSVI)",
+    "marcaMotor": "MOBIL DELVAC MODERN",
+    "capacidad": 34,
+    "promocion": "PAGUE 30 Y LLEVE 34",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
   },
   {
     "marcaEquipo": "INTERNATIONAL",
     "linea": "INT - WORKSTAR7600",
-    "motor": "L9 CM2450 (EPA 21)",
+    "modeloMotor": "L9 CM2450 (EPA 21)",
+    "marcaMotor": "MOBIL DELVAC MODERN",
     "capacidad": 30,
-    "paga": 26,
-    "recibe": 30,
-    "obsequio": 4
+    "promocion": "PAGUE 26 Y LLEVE 30",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "INTERNATIONAL",
+    "linea": "INT - WORKSTAR7600",
+    "modeloMotor": "L9 CM2450 (EPA 21)",
+    "marcaMotor": "Chevron Delo 400 SDE",
+    "capacidad": 30,
+    "promocion": "PAGUE 26 Y LLEVE 30",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
   },
   {
     "marcaEquipo": "SHACMAN",
     "linea": "SHC-X3000",
-    "motor": "ISZ13 CM2150 (EURO 5)",
+    "modeloMotor": "ISZ13 CM2150 (EURO 5)",
+    "marcaMotor": "Chevron Delo 400 SDE",
     "capacidad": 42,
-    "paga": 38,
-    "recibe": 42,
-    "obsequio": 4
+    "promocion": "PAGUE 38 Y LLEVE 42",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "SHACMAN",
+    "linea": "SHC-X3000",
+    "modeloMotor": "ISZ13 CM2150 (EURO 5)",
+    "marcaMotor": "MOBIL DELVAC MODERN",
+    "capacidad": 42,
+    "promocion": "PAGUE 38 Y LLEVE 42",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
   },
   {
     "marcaEquipo": "KENWORTH",
     "linea": "INT- HX SERIES",
-    "motor": "ISX15 CM2250/2350(EURO 6)",
+    "modeloMotor": "ISX15 CM2250/2350(EURO 6)",
+    "marcaMotor": "Gulf superfleet supreme",
     "capacidad": 48,
-    "paga": 44,
-    "recibe": 48,
-    "obsequio": 4
+    "promocion": "PAGUE 44 LLEVE 48",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "INT- HX SERIES",
+    "modeloMotor": "ISX15 CM2250/2350(EURO 6)",
+    "marcaMotor": "Gulf + Nano",
+    "capacidad": 48,
+    "promocion": "PAGUE 44 LLEVE 48",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "INT- HX SERIES",
+    "modeloMotor": "ISX15 CM2250/2350(EURO 6)",
+    "marcaMotor": "MOBIL DELVAC MODERN",
+    "capacidad": 48,
+    "promocion": "PAGUE 44 LLEVE 48",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
   },
   {
     "marcaEquipo": "KENWORTH",
     "linea": "KW-T800",
-    "motor": "ISX15 CM2250/2350(EURO 6)",
+    "modeloMotor": "ISX15 CM2250/2350(EURO 6)",
+    "marcaMotor": "valvoline premium blue 7800 plus",
     "capacidad": 48,
-    "paga": 44,
-    "recibe": 48,
-    "obsequio": 4
+    "promocion": "PAGUE 44 LLEVE 48",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "KW-T800",
+    "modeloMotor": "ISX15 CM2250/2350(EURO 6)",
+    "marcaMotor": "MOBIL DELVAC MODERN",
+    "capacidad": 48,
+    "promocion": "PAGUE 44 LLEVE 48",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "KW-T800",
+    "modeloMotor": "ISX15 CM2250/2350(EURO 6)",
+    "marcaMotor": "Gulf + Nano",
+    "capacidad": 48,
+    "promocion": "PAGUE 44 LLEVE 48",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "KW-T800",
+    "modeloMotor": "ISX15 CM2250/2350(EURO 6)",
+    "marcaMotor": "Gulf superfleet supreme",
+    "capacidad": 48,
+    "promocion": "PAGUE 44 LLEVE 48",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "INT- HX SERIES",
+    "modeloMotor": "ISX15 CM2250/2350(EURO 6)",
+    "marcaMotor": "valvoline premium blue 7800 plus",
+    "capacidad": 48,
+    "promocion": "PAGUE 44 LLEVE 48",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
   },
   {
     "marcaEquipo": "KENWORTH",
     "linea": "KW-T880",
-    "motor": "ISX15 CM2250/2350(EURO 6)",
+    "modeloMotor": "ISX15 CM2250/2350(EURO 6)",
+    "marcaMotor": "Gulf superfleet supreme",
     "capacidad": 48,
-    "paga": 44,
-    "recibe": 48,
-    "obsequio": 4
+    "promocion": "PAGUE 44 LLEVE 48",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
   },
   {
     "marcaEquipo": "KENWORTH",
-    "linea": "KW-T800",
-    "motor": "ISX CM570",
+    "linea": "KW-T880",
+    "modeloMotor": "ISX15 CM2250/2350(EURO 6)",
+    "marcaMotor": "Gulf + Nano",
     "capacidad": 48,
-    "paga": 44,
-    "recibe": 48,
-    "obsequio": 4
+    "promocion": "PAGUE 44 LLEVE 48",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "KW-T880",
+    "modeloMotor": "ISX15 CM2250/2350(EURO 6)",
+    "marcaMotor": "MOBIL DELVAC MODERN",
+    "capacidad": 48,
+    "promocion": "PAGUE 44 LLEVE 48",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "KW-T880",
+    "modeloMotor": "ISX15 CM2250/2350(EURO 6)",
+    "marcaMotor": "valvoline premium blue 7800 plus",
+    "capacidad": 48,
+    "promocion": "PAGUE 44 LLEVE 48",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
   },
   {
     "marcaEquipo": "KENWORTH",
     "linea": "KW-T800",
-    "motor": "ISM11 CM876 (EURO 5)",
-    "capacidad": 40,
-    "paga": 36,
-    "recibe": 40,
-    "obsequio": 4
+    "modeloMotor": "ISX CM570",
+    "marcaMotor": "valvoline premium blue 7800 plus",
+    "capacidad": 48,
+    "promocion": "PAGUE 44 LLEVE 48",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
   },
   {
     "marcaEquipo": "KENWORTH",
     "linea": "KW-T800",
-    "motor": "ISM 570 (EURO 4)",
+    "modeloMotor": "ISX CM570",
+    "marcaMotor": "Gulf + Nano",
+    "capacidad": 48,
+    "promocion": "PAGUE 44 LLEVE 48",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "KW-T800",
+    "modeloMotor": "ISX CM570",
+    "marcaMotor": "Gulf superfleet supreme",
+    "capacidad": 48,
+    "promocion": "PAGUE 44 LLEVE 48",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "KW-T800",
+    "modeloMotor": "ISX CM570",
+    "marcaMotor": "MOBIL DELVAC MODERN",
+    "capacidad": 48,
+    "promocion": "PAGUE 44 LLEVE 48",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "KW-T800",
+    "modeloMotor": "ISM11 CM876 (EURO 5)",
+    "marcaMotor": "valvoline premium blue 7800 plus",
     "capacidad": 40,
-    "paga": 36,
-    "recibe": 40,
-    "obsequio": 4
+    "promocion": "PAGUE 36 LLEVE 40",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "KW-T800",
+    "modeloMotor": "ISM11 CM876 (EURO 5)",
+    "marcaMotor": "Gulf superfleet supreme",
+    "capacidad": 40,
+    "promocion": "PAGUE 36 LLEVE 40",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "KW-T800",
+    "modeloMotor": "ISM11 CM876 (EURO 5)",
+    "marcaMotor": "Gulf + Nano",
+    "capacidad": 40,
+    "promocion": "PAGUE 36 LLEVE 40",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "KW-T800",
+    "modeloMotor": "ISM11 CM876 (EURO 5)",
+    "marcaMotor": "MOBIL DELVAC MODERN",
+    "capacidad": 40,
+    "promocion": "PAGUE 36 LLEVE 40",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "KW-T800",
+    "modeloMotor": "ISM 570 (EURO 4)",
+    "marcaMotor": "valvoline premium blue 7800 plus",
+    "capacidad": 40,
+    "promocion": "PAGUE 36 LLEVE 40",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "KW-T800",
+    "modeloMotor": "ISM 570 (EURO 4)",
+    "marcaMotor": "MOBIL DELVAC MODERN",
+    "capacidad": 40,
+    "promocion": "PAGUE 36 LLEVE 40",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "KW-T800",
+    "modeloMotor": "ISM 570 (EURO 4)",
+    "marcaMotor": "Gulf + Nano",
+    "capacidad": 40,
+    "promocion": "PAGUE 36 LLEVE 40",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "KW-T800",
+    "modeloMotor": "ISM 570 (EURO 4)",
+    "marcaMotor": "Gulf superfleet supreme",
+    "capacidad": 40,
+    "promocion": "PAGUE 36 LLEVE 40",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
   },
   {
     "marcaEquipo": "INTERNATIONAL",
     "linea": "INT - WORKSTAR7600",
-    "motor": "ISM 570 (EURO 4)",
+    "modeloMotor": "ISM 570 (EURO 4)",
+    "marcaMotor": "valvoline premium blue 7800 plus",
     "capacidad": 40,
-    "paga": 36,
-    "recibe": 40,
-    "obsequio": 4
+    "promocion": "PAGUE 36 LLEVE 40",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "INTERNATIONAL",
+    "linea": "INT - WORKSTAR7600",
+    "modeloMotor": "ISM 570 (EURO 4)",
+    "marcaMotor": "MOBIL DELVAC MODERN",
+    "capacidad": 40,
+    "promocion": "PAGUE 36 LLEVE 40",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "INTERNATIONAL",
+    "linea": "INT - WORKSTAR7600",
+    "modeloMotor": "ISM 570 (EURO 4)",
+    "marcaMotor": "Gulf + Nano",
+    "capacidad": 40,
+    "promocion": "PAGUE 36 LLEVE 40",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "INTERNATIONAL",
+    "linea": "INT - WORKSTAR7600",
+    "modeloMotor": "ISM 570 (EURO 4)",
+    "marcaMotor": "Gulf superfleet supreme",
+    "capacidad": 40,
+    "promocion": "PAGUE 36 LLEVE 40",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
   },
   {
     "marcaEquipo": "INTERNATIONAL",
     "linea": "INT - SERIES HV",
-    "motor": "ISL CM2150 (EURO 4)",
+    "modeloMotor": "ISL CM2150 (EURO 4)",
+    "marcaMotor": "valvoline premium blue 7800 plus",
     "capacidad": 24,
-    "paga": 21,
-    "recibe": 24,
-    "obsequio": 3
+    "promocion": "PAGUE 21 Y LLEVE 24",
+    "obsequio": 3,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "INTERNATIONAL",
+    "linea": "INT - SERIES HV",
+    "modeloMotor": "ISL CM2150 (EURO 4)",
+    "marcaMotor": "MOBIL DELVAC MODERN",
+    "capacidad": 24,
+    "promocion": "PAGUE 21 Y LLEVE 24",
+    "obsequio": 3,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "INTERNATIONAL",
+    "linea": "INT - SERIES HV",
+    "modeloMotor": "ISL CM2150 (EURO 4)",
+    "marcaMotor": "Gulf + Nano",
+    "capacidad": 24,
+    "promocion": "PAGUE 21 Y LLEVE 24",
+    "obsequio": 3,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "INTERNATIONAL",
+    "linea": "INT - SERIES HV",
+    "modeloMotor": "ISL CM2150 (EURO 4)",
+    "marcaMotor": "Gulf superfleet supreme",
+    "capacidad": 24,
+    "promocion": "PAGUE 21 Y LLEVE 24",
+    "obsequio": 3,
+    "origen": "Aceite para motor"
   },
   {
     "marcaEquipo": "JAC",
     "linea": "JAC - K7",
-    "motor": "ISG12 CM2880 (EURO 4)",
+    "modeloMotor": "ISG12 CM2880 (EURO 4)",
+    "marcaMotor": "valvoline premium blue 7800 plus",
     "capacidad": 38,
-    "paga": 34,
-    "recibe": 38,
-    "obsequio": 4
+    "promocion": "PAGUE 34 Y LLEVE 38",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "JAC",
+    "linea": "JAC - K7",
+    "modeloMotor": "ISG12 CM2880 (EURO 4)",
+    "marcaMotor": "Gulf superfleet supreme",
+    "capacidad": 38,
+    "promocion": "PAGUE 34 Y LLEVE 38",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "JAC",
+    "linea": "JAC - K7",
+    "modeloMotor": "ISG12 CM2880 (EURO 4)",
+    "marcaMotor": "Gulf + Nano",
+    "capacidad": 38,
+    "promocion": "PAGUE 34 Y LLEVE 38",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "JAC",
+    "linea": "JAC - K7",
+    "modeloMotor": "ISG12 CM2880 (EURO 4)",
+    "marcaMotor": "MOBIL DELVAC MODERN",
+    "capacidad": 38,
+    "promocion": "PAGUE 34 Y LLEVE 38",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
   },
   {
     "marcaEquipo": "FOTON",
     "linea": "FOTON - AUMAN S23",
-    "motor": "ISG12 CM2880 (EURO 4)",
+    "modeloMotor": "ISG12 CM2880 (EURO 4)",
+    "marcaMotor": "valvoline premium blue 7800 plus",
     "capacidad": 38,
-    "paga": 34,
-    "recibe": 38,
-    "obsequio": 4
+    "promocion": "PAGUE 34 Y LLEVE 38",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "FOTON",
+    "linea": "FOTON - AUMAN S23",
+    "modeloMotor": "ISG12 CM2880 (EURO 4)",
+    "marcaMotor": "Gulf superfleet supreme",
+    "capacidad": 38,
+    "promocion": "PAGUE 34 Y LLEVE 38",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "FOTON",
+    "linea": "FOTON - AUMAN S23",
+    "modeloMotor": "ISG12 CM2880 (EURO 4)",
+    "marcaMotor": "Gulf + Nano",
+    "capacidad": 38,
+    "promocion": "PAGUE 34 Y LLEVE 38",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "FOTON",
+    "linea": "FOTON - AUMAN S23",
+    "modeloMotor": "ISG12 CM2880 (EURO 4)",
+    "marcaMotor": "MOBIL DELVAC MODERN",
+    "capacidad": 38,
+    "promocion": "PAGUE 34 Y LLEVE 38",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
   },
   {
     "marcaEquipo": "FOTON",
     "linea": "FOTON - AUMAN GTL MIXER",
-    "motor": "ISG11 CM2880 (EURO 4)",
+    "modeloMotor": "ISG11 CM2880 (EURO 4)",
+    "marcaMotor": "valvoline premium blue 7800 plus",
     "capacidad": 38,
-    "paga": 34,
-    "recibe": 38,
-    "obsequio": 4
+    "promocion": "PAGUE 34 Y LLEVE 38",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "FOTON",
+    "linea": "FOTON - AUMAN GTL MIXER",
+    "modeloMotor": "ISG11 CM2880 (EURO 4)",
+    "marcaMotor": "Gulf superfleet supreme",
+    "capacidad": 38,
+    "promocion": "PAGUE 34 Y LLEVE 38",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "FOTON",
+    "linea": "FOTON - AUMAN GTL MIXER",
+    "modeloMotor": "ISG11 CM2880 (EURO 4)",
+    "marcaMotor": "Gulf + Nano",
+    "capacidad": 38,
+    "promocion": "PAGUE 34 Y LLEVE 38",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "FOTON",
+    "linea": "FOTON - AUMAN GTL MIXER",
+    "modeloMotor": "ISG11 CM2880 (EURO 4)",
+    "marcaMotor": "MOBIL DELVAC MODERN",
+    "capacidad": 38,
+    "promocion": "PAGUE 34 Y LLEVE 38",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
   },
   {
     "marcaEquipo": "JAC",
     "linea": "JAC - JQR,JPR,JRR",
-    "motor": "ISF3.8 CM2220 (EURO3/4)",
+    "modeloMotor": "ISF3.8 CM2220 (EURO3/4)",
+    "marcaMotor": "Gulf + Nano",
     "capacidad": 11,
-    "paga": 10,
-    "recibe": 11,
-    "obsequio": 1
+    "promocion": "PAGUE 10 LLEVE 11",
+    "obsequio": 1,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "JAC",
+    "linea": "JAC - JQR,JPR,JRR",
+    "modeloMotor": "ISF3.8 CM2220 (EURO3/4)",
+    "marcaMotor": "Chevron Delo 400 SDE",
+    "capacidad": 11,
+    "promocion": "PAGUE 10 LLEVE 11",
+    "obsequio": 1,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "JAC",
+    "linea": "JAC - JQR,JPR,JRR",
+    "modeloMotor": "ISF3.8 CM2220 (EURO3/4)",
+    "marcaMotor": "Gulf superfleet supreme",
+    "capacidad": 11,
+    "promocion": "PAGUE 10 LLEVE 11",
+    "obsequio": 1,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "JAC",
+    "linea": "JAC - JQR,JPR,JRR",
+    "modeloMotor": "ISF3.8 CM2220 (EURO3/4)",
+    "marcaMotor": "MOBIL DELVAC MODERN",
+    "capacidad": 11,
+    "promocion": "PAGUE 10 LLEVE 11",
+    "obsequio": 1,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "JAC",
+    "linea": "JAC - JQR,JPR,JRR",
+    "modeloMotor": "ISF3.8 CM2220 (EURO3/4)",
+    "marcaMotor": "valvoline premium blue 7800 plus",
+    "capacidad": 11,
+    "promocion": "PAGUE 10 LLEVE 11",
+    "obsequio": 1,
+    "origen": "Aceite para motor"
   },
   {
     "marcaEquipo": "FOTON",
     "linea": "FOTON - AUMARK FRR, FPR, FQR",
-    "motor": "ISF3.8 CM2220 (EURO3/4)",
+    "modeloMotor": "ISF3.8 CM2220 (EURO3/4)",
+    "marcaMotor": "valvoline premium blue 7800 plus",
     "capacidad": 11,
-    "paga": 10,
-    "recibe": 11,
-    "obsequio": 1
+    "promocion": "PAGUE 10 LLEVE 11",
+    "obsequio": 1,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "FOTON",
+    "linea": "FOTON - AUMARK FRR, FPR, FQR",
+    "modeloMotor": "ISF3.8 CM2220 (EURO3/4)",
+    "marcaMotor": "Chevron Delo 400 SDE",
+    "capacidad": 11,
+    "promocion": "PAGUE 10 LLEVE 11",
+    "obsequio": 1,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "FOTON",
+    "linea": "FOTON - AUMARK FRR, FPR, FQR",
+    "modeloMotor": "ISF3.8 CM2220 (EURO3/4)",
+    "marcaMotor": "Gulf superfleet supreme",
+    "capacidad": 11,
+    "promocion": "PAGUE 10 LLEVE 11",
+    "obsequio": 1,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "FOTON",
+    "linea": "FOTON - AUMARK FRR, FPR, FQR",
+    "modeloMotor": "ISF3.8 CM2220 (EURO3/4)",
+    "marcaMotor": "Gulf + Nano",
+    "capacidad": 11,
+    "promocion": "PAGUE 10 LLEVE 11",
+    "obsequio": 1,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "FOTON",
+    "linea": "FOTON - AUMARK FRR, FPR, FQR",
+    "modeloMotor": "ISF3.8 CM2220 (EURO3/4)",
+    "marcaMotor": "MOBIL DELVAC MODERN",
+    "capacidad": 11,
+    "promocion": "PAGUE 10 LLEVE 11",
+    "obsequio": 1,
+    "origen": "Aceite para motor"
   },
   {
     "marcaEquipo": "JAC",
     "linea": "JAC - JKR",
-    "motor": "ISF2.8 CM2220 (EURO 3/4)",
+    "modeloMotor": "ISF2.8 CM2220 (EURO 3/4)",
+    "marcaMotor": "MOBIL DELVAC MODERN",
     "capacidad": 6,
-    "paga": 5,
-    "recibe": 6,
-    "obsequio": 1
+    "promocion": "PAGUE 5 LLEVE 6",
+    "obsequio": 1,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "JAC",
+    "linea": "JAC - JKR",
+    "modeloMotor": "ISF2.8 CM2220 (EURO 3/4)",
+    "marcaMotor": "valvoline premium blue 7800 plus",
+    "capacidad": 6,
+    "promocion": "PAGUE 5 LLEVE 6",
+    "obsequio": 1,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "JAC",
+    "linea": "JAC - JKR",
+    "modeloMotor": "ISF2.8 CM2220 (EURO 3/4)",
+    "marcaMotor": "Gulf + Nano",
+    "capacidad": 6,
+    "promocion": "PAGUE 5 LLEVE 6",
+    "obsequio": 1,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "JAC",
+    "linea": "JAC - JKR",
+    "modeloMotor": "ISF2.8 CM2220 (EURO 3/4)",
+    "marcaMotor": "Gulf superfleet supreme",
+    "capacidad": 6,
+    "promocion": "PAGUE 5 LLEVE 6",
+    "obsequio": 1,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "JAC",
+    "linea": "JAC - JKR",
+    "modeloMotor": "ISF2.8 CM2220 (EURO 3/4)",
+    "marcaMotor": "Chevron Delo 400 SDE",
+    "capacidad": 6,
+    "promocion": "PAGUE 5 LLEVE 6",
+    "obsequio": 1,
+    "origen": "Aceite para motor"
   },
   {
     "marcaEquipo": "FOTON",
     "linea": "FOTON-TULAND",
-    "motor": "ISF2.8 CM2220 (EURO 3/4)",
+    "modeloMotor": "ISF2.8 CM2220 (EURO 3/4)",
+    "marcaMotor": "Gulf superfleet supreme",
     "capacidad": 6,
-    "paga": 5,
-    "recibe": 6,
-    "obsequio": 1
+    "promocion": "PAGUE 5 LLEVE 6",
+    "obsequio": 1,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "FOTON",
+    "linea": "FOTON-TULAND",
+    "modeloMotor": "ISF2.8 CM2220 (EURO 3/4)",
+    "marcaMotor": "valvoline premium blue 7800 plus",
+    "capacidad": 6,
+    "promocion": "PAGUE 5 LLEVE 6",
+    "obsequio": 1,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "FOTON",
+    "linea": "FOTON-TULAND",
+    "modeloMotor": "ISF2.8 CM2220 (EURO 3/4)",
+    "marcaMotor": "Chevron Delo 400 SDE",
+    "capacidad": 6,
+    "promocion": "PAGUE 5 LLEVE 6",
+    "obsequio": 1,
+    "origen": "Aceite para motor"
   },
   {
     "marcaEquipo": "FOTON",
     "linea": "AUMAN BJ1133",
-    "motor": "ISF2.8 CM2220 (EURO 3/4)",
+    "modeloMotor": "ISF2.8 CM2220 (EURO 3/4)",
+    "marcaMotor": "Chevron Delo 400 SDE",
     "capacidad": 6,
-    "paga": 5,
-    "recibe": 6,
-    "obsequio": 1
+    "promocion": "PAGUE 5 LLEVE 6",
+    "obsequio": 1,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "FOTON",
+    "linea": "AUMAN BJ1133",
+    "modeloMotor": "ISF2.8 CM2220 (EURO 3/4)",
+    "marcaMotor": "Gulf superfleet supreme",
+    "capacidad": 6,
+    "promocion": "PAGUE 5 LLEVE 6",
+    "obsequio": 1,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "FOTON",
+    "linea": "FOTON-TULAND",
+    "modeloMotor": "ISF2.8 CM2220 (EURO 3/4)",
+    "marcaMotor": "Gulf + Nano",
+    "capacidad": 6,
+    "promocion": "PAGUE 5 LLEVE 6",
+    "obsequio": 1,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "FOTON",
+    "linea": "FOTON-TULAND",
+    "modeloMotor": "ISF2.8 CM2220 (EURO 3/4)",
+    "marcaMotor": "MOBIL DELVAC MODERN",
+    "capacidad": 6,
+    "promocion": "PAGUE 5 LLEVE 6",
+    "obsequio": 1,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "FOTON",
+    "linea": "AUMAN BJ1133",
+    "modeloMotor": "ISF2.8 CM2220 (EURO 3/4)",
+    "marcaMotor": "valvoline premium blue 7800 plus",
+    "capacidad": 6,
+    "promocion": "PAGUE 5 LLEVE 6",
+    "obsequio": 1,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "FOTON",
+    "linea": "AUMAN BJ1133",
+    "modeloMotor": "ISF2.8 CM2220 (EURO 3/4)",
+    "marcaMotor": "MOBIL DELVAC MODERN",
+    "capacidad": 6,
+    "promocion": "PAGUE 5 LLEVE 6",
+    "obsequio": 1,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "FOTON",
+    "linea": "AUMAN BJ1133",
+    "modeloMotor": "ISF2.8 CM2220 (EURO 3/4)",
+    "marcaMotor": "Gulf + Nano",
+    "capacidad": 6,
+    "promocion": "PAGUE 5 LLEVE 6",
+    "obsequio": 1,
+    "origen": "Aceite para motor"
   },
   {
     "marcaEquipo": "KENWORTH",
     "linea": "KW-T300",
-    "motor": "ISC CM850 (EURO 4)",
+    "modeloMotor": "ISC CM850 (EURO 4)",
+    "marcaMotor": "Gulf superfleet supreme",
     "capacidad": 24,
-    "paga": 21,
-    "recibe": 24,
-    "obsequio": 3
+    "promocion": "PAGUE 21 Y LLEVE 24",
+    "obsequio": 3,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "KW-T300",
+    "modeloMotor": "ISC CM850 (EURO 4)",
+    "marcaMotor": "Gulf + Nano",
+    "capacidad": 24,
+    "promocion": "PAGUE 21 Y LLEVE 24",
+    "obsequio": 3,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "KW-T300",
+    "modeloMotor": "ISC CM850 (EURO 4)",
+    "marcaMotor": "MOBIL DELVAC MODERN",
+    "capacidad": 24,
+    "promocion": "PAGUE 21 Y LLEVE 24",
+    "obsequio": 3,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "KW-T300",
+    "modeloMotor": "ISC CM850 (EURO 4)",
+    "marcaMotor": "valvoline premium blue 7800 plus",
+    "capacidad": 24,
+    "promocion": "PAGUE 21 Y LLEVE 24",
+    "obsequio": 3,
+    "origen": "Aceite para motor"
   },
   {
     "marcaEquipo": "YUTONG",
     "linea": "YU- ZK6107HA",
-    "motor": "ISBE CM2150 (EURO 4)",
+    "modeloMotor": "ISBE CM2150 (EURO 4)",
+    "marcaMotor": "Gulf superfleet supreme",
     "capacidad": 26,
-    "paga": 23,
-    "recibe": 26,
-    "obsequio": 3
+    "promocion": "PAGUE 23 Y LLEVE 26",
+    "obsequio": 3,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "YUTONG",
+    "linea": "YU- ZK6107HA",
+    "modeloMotor": "ISBE CM2150 (EURO 4)",
+    "marcaMotor": "Gulf + Nano",
+    "capacidad": 26,
+    "promocion": "PAGUE 23 Y LLEVE 26",
+    "obsequio": 3,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "YUTONG",
+    "linea": "YU- ZK6107HA",
+    "modeloMotor": "ISBE CM2150 (EURO 4)",
+    "marcaMotor": "MOBIL DELVAC MODERN",
+    "capacidad": 26,
+    "promocion": "PAGUE 23 Y LLEVE 26",
+    "obsequio": 3,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "YUTONG",
+    "linea": "YU- ZK6107HA",
+    "modeloMotor": "ISBE CM2150 (EURO 4)",
+    "marcaMotor": "valvoline premium blue 7800 plus",
+    "capacidad": 26,
+    "promocion": "PAGUE 23 Y LLEVE 26",
+    "obsequio": 3,
+    "origen": "Aceite para motor"
   },
   {
     "marcaEquipo": "FOTON",
     "linea": "FOTON - AUMARK FRR, FPR, FQR",
-    "motor": "F3.8 CM2620 (EURO 6)",
+    "modeloMotor": "F3.8 CM2620 (EURO 6)",
+    "marcaMotor": "MOBIL DELVAC MODERN",
     "capacidad": 11,
-    "paga": 10,
-    "recibe": 11,
-    "obsequio": 1
+    "promocion": "PAGUE 10 Y LLEVE 11",
+    "obsequio": 1,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "FOTON",
+    "linea": "FOTON - AUMARK FRR, FPR, FQR",
+    "modeloMotor": "F3.8 CM2620 (EURO 6)",
+    "marcaMotor": "Chevron Delo 400 SDE",
+    "capacidad": 11,
+    "promocion": "PAGUE 10 Y LLEVE 11",
+    "obsequio": 1,
+    "origen": "Aceite para motor"
   },
   {
     "marcaEquipo": "FOTON",
     "linea": "FOTON - AUMARK FHR,FKR",
-    "motor": "F2.5 CM2620 (EURO 6)",
+    "modeloMotor": "F2.5 CM2620 (EURO 6)",
+    "marcaMotor": "MOBIL DELVAC MODERN",
     "capacidad": 6,
-    "paga": 5,
-    "recibe": 6,
-    "obsequio": 1
+    "promocion": "PAGUE 5 LLEVE 6",
+    "obsequio": 1,
+    "origen": "Aceite para motor"
   },
   {
-    "marcaEquipo": "",
-    "linea": "",
-    "motor": "D6.7 CM2670 (NSVI)",
+    "marcaEquipo": "FOTON",
+    "linea": "FOTON - AUMARK FHR,FKR",
+    "modeloMotor": "F2.5 CM2620 (EURO 6)",
+    "marcaMotor": "Chevron Delo 400 SDE",
+    "capacidad": 6,
+    "promocion": "PAGUE 5 LLEVE 6",
+    "obsequio": 1,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "-",
+    "linea": "-",
+    "modeloMotor": "D6.7 CM2670 (NSVI)",
+    "marcaMotor": "MOBIL DELVAC MODERN",
     "capacidad": 22,
-    "paga": 20,
-    "recibe": 22,
-    "obsequio": 2
+    "promocion": "PAGUE 20 Y LLEVE 22",
+    "obsequio": 2,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "-",
+    "linea": "-",
+    "modeloMotor": "D6.7 CM2670 (NSVI)",
+    "marcaMotor": "Chevron Delo 400 SDE",
+    "capacidad": 22,
+    "promocion": "PAGUE 20 Y LLEVE 22",
+    "obsequio": 2,
+    "origen": "Aceite para motor"
   },
   {
     "marcaEquipo": "KENWORTH",
     "linea": "KW-T370",
-    "motor": "B6.7 CM2450 B155B (EPA 21)",
+    "modeloMotor": "B6.7 CM2450 B155B (EPA 21)",
+    "marcaMotor": "MOBIL DELVAC MODERN",
     "capacidad": 16,
-    "paga": 14,
-    "recibe": 16,
-    "obsequio": 2
+    "promocion": "PAGUE 14 LLEVE 16",
+    "obsequio": 2,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "KENWORTH",
+    "linea": "KW-T370",
+    "modeloMotor": "B6.7 CM2450 B155B (EPA 21)",
+    "marcaMotor": "Chevron Delo 400 SDE",
+    "capacidad": 16,
+    "promocion": "PAGUE 14 LLEVE 16",
+    "obsequio": 2,
+    "origen": "Aceite para motor"
   },
   {
     "marcaEquipo": "FOTON",
     "linea": "FOTON - FRR-PREMIUM",
-    "motor": "B4.5 CM2620 (EURO 6)",
+    "modeloMotor": "B4.5 CM2620 (EURO 6)",
+    "marcaMotor": "MOBIL DELVAC MODERN",
     "capacidad": 17,
-    "paga": 15,
-    "recibe": 17,
-    "obsequio": 2
+    "promocion": "PAGUE 15 Y LLEVE 17",
+    "obsequio": 2,
+    "origen": "Aceite para motor"
   },
   {
-    "marcaEquipo": "",
-    "linea": "",
-    "motor": "B4.0 CM2620 (NSVI)",
+    "marcaEquipo": "FOTON",
+    "linea": "FOTON - FRR-PREMIUM",
+    "modeloMotor": "B4.5 CM2620 (EURO 6)",
+    "marcaMotor": "Chevron Delo 400 SDE",
     "capacidad": 17,
-    "paga": 15,
-    "recibe": 17,
-    "obsequio": 2
+    "promocion": "PAGUE 15 Y LLEVE 17",
+    "obsequio": 2,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "-",
+    "linea": "-",
+    "modeloMotor": "B4.0 CM2620 (NSVI)",
+    "marcaMotor": "MOBIL DELVAC MODERN",
+    "capacidad": 17,
+    "promocion": "PAGUE 15 Y LLEVE 17",
+    "obsequio": 2,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "-",
+    "linea": "-",
+    "modeloMotor": "B4.0 CM2620 (NSVI)",
+    "marcaMotor": "Chevron Delo 400 SDE",
+    "capacidad": 17,
+    "promocion": "PAGUE 15 Y LLEVE 17",
+    "obsequio": 2,
+    "origen": "Aceite para motor"
   },
   {
     "marcaEquipo": "VOLKSWAGEN",
     "linea": "VW-WORKER",
-    "motor": "6CT",
+    "modeloMotor": "6CT",
+    "marcaMotor": "valvoline premium blue 7800 plus",
     "capacidad": 24,
-    "paga": 21,
-    "recibe": 24,
-    "obsequio": 3
+    "promocion": "PAGUE 21 Y LLEVE 24",
+    "obsequio": 3,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "VOLKSWAGEN",
+    "linea": "VW-WORKER",
+    "modeloMotor": "6CT",
+    "marcaMotor": "MOBIL DELVAC MODERN",
+    "capacidad": 24,
+    "promocion": "PAGUE 21 Y LLEVE 24",
+    "obsequio": 3,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "VOLKSWAGEN",
+    "linea": "VW-WORKER",
+    "modeloMotor": "6CT",
+    "marcaMotor": "Gulf + Nano",
+    "capacidad": 24,
+    "promocion": "PAGUE 21 Y LLEVE 24",
+    "obsequio": 3,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "VOLKSWAGEN",
+    "linea": "VW-WORKER",
+    "modeloMotor": "6CT",
+    "marcaMotor": "Gulf superfleet supreme",
+    "capacidad": 24,
+    "promocion": "PAGUE 21 Y LLEVE 24",
+    "obsequio": 3,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "-",
+    "linea": "-",
+    "modeloMotor": "-",
+    "marcaMotor": "MOBIL DELVAC MODERN",
+    "capacidad": 44,
+    "promocion": "PAGUE 40 Y LLEVE 4",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "-",
+    "linea": "-",
+    "modeloMotor": "-",
+    "marcaMotor": "Gulf + Nano",
+    "capacidad": 44,
+    "promocion": "PAGUE 40 Y LLEVE 4",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
+  },
+  {
+    "marcaEquipo": "-",
+    "linea": "-",
+    "modeloMotor": "-",
+    "marcaMotor": "Gulf superfleet supreme",
+    "capacidad": 44,
+    "promocion": "PAGUE 40 Y LLEVE 4",
+    "obsequio": 4,
+    "origen": "Aceite para motor"
   },
   {
     "marcaEquipo": "",
     "linea": "",
-    "motor": "",
+    "modeloMotor": "6CT",
+    "marcaMotor": "Cummins",
+    "capacidad": 24,
+    "promocion": "PAGUE 21 Y LLEVE 24",
+    "obsequio": "3 Cuartos",
+    "origen": "parte 2"
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "modeloMotor": "B4.0 CM2620 (NSVI)",
+    "marcaMotor": "Cummins",
+    "capacidad": 17,
+    "promocion": "PAGUE 15 Y LLEVE 17",
+    "obsequio": "2 Cuartos",
+    "origen": "parte 2"
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "modeloMotor": "B4.5 CM2620 (EURO 6)",
+    "marcaMotor": "Cummins",
+    "capacidad": 17,
+    "promocion": "PAGUE 15 Y LLEVE 17",
+    "obsequio": "2 Cuartos",
+    "origen": "parte 2"
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "modeloMotor": "B6.7 CM2450 B155B (EPA 21)",
+    "marcaMotor": "Cummins",
+    "capacidad": 16,
+    "promocion": "PAGUE 14 LLEVE 16",
+    "obsequio": "2 Cuartos",
+    "origen": "parte 2"
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "modeloMotor": "D6.7 CM2670 (NSVI)",
+    "marcaMotor": "Cummins",
+    "capacidad": 22,
+    "promocion": "PAGUE 20 Y LLEVE 22",
+    "obsequio": "2 Cuartos",
+    "origen": "parte 2"
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "modeloMotor": "F2.5 CM2620 (EURO 6)",
+    "marcaMotor": "Cummins",
+    "capacidad": 6,
+    "promocion": "PAGUE 5 LLEVE 6",
+    "obsequio": "1 Cuarto",
+    "origen": "parte 2"
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "modeloMotor": "F3.8 CM2620 (EURO 6)",
+    "marcaMotor": "Cummins",
+    "capacidad": 11,
+    "promocion": "PAGUE 10 LLEVE 11",
+    "obsequio": "1 Cuarto",
+    "origen": "parte 2"
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "modeloMotor": "ISBE CM2150 (EURO 4)",
+    "marcaMotor": "Cummins",
+    "capacidad": 26,
+    "promocion": "PAGUE 23 Y LLEVE 26",
+    "obsequio": "3 Cuartos",
+    "origen": "parte 2"
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "modeloMotor": "ISC CM850 (EURO 4)",
+    "marcaMotor": "Cummins",
+    "capacidad": 24,
+    "promocion": "PAGUE 21 Y LLEVE 24",
+    "obsequio": "3 Cuartos",
+    "origen": "parte 2"
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "modeloMotor": "ISF2.8 CM2220 (EURO 3/4)",
+    "marcaMotor": "Cummins",
+    "capacidad": 6,
+    "promocion": "PAGUE 5 LLEVE 6",
+    "obsequio": "1 Cuarto",
+    "origen": "parte 2"
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "modeloMotor": "ISF3.8 CM2220 (EURO3/4)",
+    "marcaMotor": "Cummins",
+    "capacidad": 11,
+    "promocion": "PAGUE 10 LLEVE 11",
+    "obsequio": "1 Cuarto",
+    "origen": "parte 2"
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "modeloMotor": "ISG11 CM2880 (EURO 4)",
+    "marcaMotor": "Cummins",
+    "capacidad": 38,
+    "promocion": "PAGUE 34 Y LLEVE 38",
+    "obsequio": "4 Cuartos",
+    "origen": "parte 2"
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "modeloMotor": "ISG12 CM2880 (EURO 4)",
+    "marcaMotor": "Cummins",
+    "capacidad": 38,
+    "promocion": "PAGUE 34 Y LLEVE 38",
+    "obsequio": "4 Cuartos",
+    "origen": "parte 2"
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "modeloMotor": "ISL CM2150 (EURO 4)",
+    "marcaMotor": "Cummins",
+    "capacidad": 24,
+    "promocion": "PAGUE 21 Y LLEVE 24",
+    "obsequio": "3 Cuartos",
+    "origen": "parte 2"
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "modeloMotor": "ISM 570 (EURO 4)",
+    "marcaMotor": "Cummins",
+    "capacidad": 40,
+    "promocion": "PAGUE 36 LLEVE 40",
+    "obsequio": "4 Cuartos",
+    "origen": "parte 2"
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "modeloMotor": "ISM11 CM876 (EURO 5)",
+    "marcaMotor": "Cummins",
+    "capacidad": 40,
+    "promocion": "PAGUE 36 LLEVE 40",
+    "obsequio": "4 Cuartos",
+    "origen": "parte 2"
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "modeloMotor": "ISX CM570",
+    "marcaMotor": "Cummins",
+    "capacidad": 48,
+    "promocion": "PAGUE 44 LLEVE 48",
+    "obsequio": "4 Cuartos",
+    "origen": "parte 2"
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "modeloMotor": "ISX15 CM2250/2350(EURO 6)",
+    "marcaMotor": "Cummins",
+    "capacidad": 48,
+    "promocion": "PAGUE 44 LLEVE 48",
+    "obsequio": "4 Cuartos",
+    "origen": "parte 2"
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "modeloMotor": "ISZ13 CM2150 (EURO 5)",
+    "marcaMotor": "Cummins",
+    "capacidad": 42,
+    "promocion": "PAGUE 38 Y LLEVE 42",
+    "obsequio": "4 Cuartos",
+    "origen": "parte 2"
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "modeloMotor": "L9 CM2450 (EPA 21)",
+    "marcaMotor": "Cummins",
+    "capacidad": 30,
+    "promocion": "PAGUE 26 Y LLEVE 30",
+    "obsequio": "4 Cuartos",
+    "origen": "parte 2"
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "modeloMotor": "L9 CM2670 (NSVI)",
+    "marcaMotor": "Cummins",
+    "capacidad": 34,
+    "promocion": "PAGUE 30 Y LLEVE 34",
+    "obsequio": "4 Cuartos",
+    "origen": "parte 2"
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "modeloMotor": "NT",
+    "marcaMotor": "Cummins",
     "capacidad": 44,
-    "paga": 40,
-    "recibe": 44,
-    "obsequio": 4
+    "promocion": "PAGUE 40 Y LLEVE 4",
+    "obsequio": "4 Cuartos",
+    "origen": "parte 2"
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "modeloMotor": "X12 CM2670 (EURO 6)",
+    "marcaMotor": "Cummins",
+    "capacidad": 36,
+    "promocion": "PAGUE 32 Y LLEVE 36",
+    "obsequio": "4 Cuartos",
+    "origen": "parte 2"
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "modeloMotor": "Z14 CM2670 (NSVI)",
+    "marcaMotor": "Cummins",
+    "capacidad": 47,
+    "promocion": "PAGUE 43 Y LLEVE 47",
+    "obsequio": "4 Cuartos",
+    "origen": "parte 2"
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "modeloMotor": " Otros Modelos",
+    "marcaMotor": "Otras Marcas",
+    "capacidad": " Carter Mayor o igual 6  cuartos  hasta  menor o igual 11  Cuartos",
+    "promocion": "",
+    "obsequio": "1 Cuarto",
+    "origen": "parte 2"
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "modeloMotor": "  Otros Modelos",
+    "marcaMotor": "Otras Marcas",
+    "capacidad": " Carter Mayor o igual 16 cuartos hasta  menor o igual 22  Cuartos",
+    "promocion": "",
+    "obsequio": "2 Cuartos",
+    "origen": "parte 2"
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "modeloMotor": "  Otros Modelos",
+    "marcaMotor": "Otras Marcas",
+    "capacidad": " Carter Mayor o igual 24 cuartos hasta  menor o igual 26  Cuartos",
+    "promocion": "",
+    "obsequio": "3 Cuartos",
+    "origen": "parte 2"
+  },
+  {
+    "marcaEquipo": "",
+    "linea": "",
+    "modeloMotor": "  Otros Modelos",
+    "marcaMotor": "Otras Marcas",
+    "capacidad": " Carter Mayor o igual 30 cuartos hasta  menor o igual 48 Cuartos",
+    "promocion": "",
+    "obsequio": "4 Cuartos",
+    "origen": "parte 2"
   }
 ]
